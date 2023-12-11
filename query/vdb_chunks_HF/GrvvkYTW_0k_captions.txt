@@ -1,0 +1,170 @@
+hi I'm James the bald engineer both of
+these are transistors one is a BJT and
+the other is a MOSFET can you tell the
+difference if not that's okay because in
+this Adams video we're going to take a
+look at MOSFETs how they work and how
+you can use them in your circuits so
+let's get going
+this video is part of a two part series
+on transistors the previous one covered
+bipolar Junction transistors bjts while
+this video covers
+metal-oxide-semiconductor field-effect
+transistors known as MOSFETs generally
+you'll use a BJT
+for small loads say less than one amp of
+current while MOSFETs are well suited
+for applications with much higher
+current for the video on bjts see Adams
+comm / EP 10 for now let's move on to
+MOSFETs
+mas is a flourless plant that typically
+grows one to ten centimetres some mosses
+grow up to 50 centimetres and can be
+commonly found on trees wait a minute
+this is the wrong script hold on
+the tree sounds right okay here's the
+other stuff okay let's try this again
+MOSFETs belong to a family tree of field
+effect transistors or known as FETs
+there are J FETs MOSFETs and igbts J
+feds actually work a little bit like a
+BJT which we've already talked about for
+this video we're focused on the MOSFET
+which has two types of modes called
+depletion and enhancement
+a depletion mode MOSFET works like a
+normally closed switch current can flow
+when no voltage is applied
+applying a negative voltage actually
+causes the current flow to stop an
+enhancement mode fit works like a
+variable resistor they come in in
+channel and P channel types
+enhancement mode fits are by far the
+most common transistor used today so
+let's focus in on them
+here's the symbol for an n-channel
+enhancement mode MOSFET and here's a
+to-220 style transistor the pins of a
+MOSFET are identified as the gate the
+drain and the source the field effect
+part of their name suggests they work by
+voltage compared to a BJT which works by
+current
+when voltage is applied between the gate
+and the source
+current is allowed to flow between the
+drain and the source
+here's the really cool thing about
+MOSFETs they're variable resistors
+controlled by voltage which means
+depending on the voltage applied between
+the gain source the resistance between
+the drain and source will vary
+with a low voltage at the gate the
+resistance from the drain to source is
+very high it's kind of like an open
+switch
+as we increase the voltage at the gate
+we pass a threshold voltage and then the
+resistance from the drain to the source
+drops and it drops very quickly the key
+difference between a MOSFET and a BJT is
+that the output current isn't a
+multiplier of the input because MOSFETs
+are all about voltage
+since the resistance is between the
+drain and source it is known as RDS on
+and can always be found in the MOSFETs
+datasheet for example this is a fq p 3 0
+n 0 6 l let's take a look at its data
+sheet from fairchild we can see that RDS
+is given when there are two different
+voltages from gate to source at 10 volts
+the on resistance will be about 27
+millions and while at 5 volts the on
+resistance is only about 35 milli ohms
+that's pretty small when you think about
+it
+we picked this MOSFET on purpose it is
+known as a logic level MOSFET because
+the voltage from gate to source vgs is
+lower than 5 volts in other words the
+threshold to turn the MOSFET on is low
+enough to be used by an Arduino or
+Raspberry Pi not all MOSFETs are logic
+level compatible so it is very important
+to check to see what the vgs threshold
+is before using it in your circuit since
+you will probably use a MOSFET
+in high current applications it is
+important to check how hot it is going
+to get here's how we calculate if we
+need a heatsink or not
+the formula to determine how much power
+the MOSFET dissipates is resistance
+times current squared
+in this case the resistance is RDS on
+and the current is whatever your load
+will draw let's use an example of a
+motor that draws one amp of current
+this means we multiply 35 millions by
+one amp squared to get 35 milli watts
+okay now we need a few more things from
+the datasheet
+first we need the Junction to ambient
+coefficient which is our theta J a and
+in this case is sixty two point five
+degrees C per watt we also need the
+maximum Junction temperature which in
+this case is 175 degrees C
+using this formula we can calculate the
+maximum power the transistor can
+dissipate without using a heatsink
+we take the maximum junction temperature
+- the ambient temperature which is going
+to be 25 degrees C and divided by the
+thermal resistance this gives a maximum
+dissipation of 2.4 watts in our example
+we are only dissipating 35 milli watts
+so we're safe to operate without a heat
+sink
+now you might be wondering how can the
+number we calculate be 2.4 Watts when
+the datasheet clearly said in
+seventy-nine watts and that's a really
+great point
+the 79 watts is if we had the ability to
+cool the transistors case to 25 degrees
+C which means you have to be using some
+kind of heatsink but we're going to
+cover more on that in a later video
+let's review what you need to know to
+use a MOSFET as a switch number one find
+out which pin is the gate drain and
+source number two look at the data sheet
+to determine the threshold voltage which
+is going to be shown as vgs or v th
+buying the drain to source resistance or
+RDS on number 4 look at R theta J a and
+the maximum Junction temperature to
+calculate how hot the MOSFET will get
+visit Adams comm slash MOSFET
+- guide a lower case to download a
+simple PDF form you can use to calculate
+these parameters
+MOSFETs are cool little devices but
+they're also a little bit complex so
+we'll cover them in more detail in
+future videos make sure you follow us or
+subscribe to know when new video
+tutorials are released if you visit
+Adams com
+you can also get show notes for this
+episode as well as other Adams videos if
+you have any questions about MOSFETs or
+ideas for future videos send them our
+way and keep watching
+maybe we'll cover them in a future video

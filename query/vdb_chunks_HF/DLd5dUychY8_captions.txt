@@ -1,0 +1,235 @@
+hi guys in this lesson i will explain
+the basic structure and working
+principle of mosfets used in switching
+boosting or power balancing tasks in dc
+to dc converter circuits motor driver
+circuits and many more power electronic
+circuits
+mosfets are the most widely used field
+effect transistors that operate with
+voltage control
+we can examine fets in two groups as you
+can see here we had a lesson in which i
+explained jfent before i'll explain the
+mosfet in this trouble
+the abbreviation of mosfet comes from
+the initials of the metal oxide
+semiconductor field effect transistor
+words
+you see the shape of a mosfet transistor
+on the left and the symbol on the right
+mosfet also has three pins
+as in jfet one of them is gate the other
+is drain and the last is source
+pin names are the same in mosfet as in
+jfat
+their order is not always like this
+locations may vary depending on the
+model
+g d and s abbreviations are used for
+these
+in the symbol the pin naming is like
+this
+we can compare the structure of the
+mosfet to a faucet as in all transistors
+we can think of the gate pin where the
+trigger is made as the valve of the
+faucet and between the drain to source
+where the current passes as the
+direction in which the water flows in
+the faucet
+when a trigger voltage is applied
+between gate and source a current
+between drainage source is controlled
+mosfets are produced in two ways
+n-channel and p-channel in the symbol
+the outward arrow on the gate pin is
+n-channel and the inward one is
+p-channel
+if you remember it was the opposite in
+j-fet
+so what's the difference between them
+the working principle of both is the
+same
+the direction of the controlled current
+in n-channel mosfet is from drain to
+source while the direction of controlled
+current in p-channel mosfet is from
+source to drain
+in other words while the positive or
+plus pole of the voltage source is
+connected to the drain pin of the mosfet
+in n-channel mosfet the positive or plus
+pole of the voltage source is connected
+to the source pin of the mosfet in
+p-channel mosfet
+let's compare mosfet bjt and jfetch
+transistors according to the current
+they can withstand
+while currents close to 1 amp and under
+1 amp can be controlled with bjt and
+jfet transistors much larger currents
+can be controlled with mosfet
+transistors we can see this by looking
+at the data sheet of some mosfet
+transistors
+for example when we look at the data
+sheet information of the very widely
+used
+irfz-44 mosfet there is information that
+current can be controlled up to a
+maximum current of 49 amps this current
+value is really a great value in
+addition a maximum voltage of 55 volts
+can be controlled with this mosfet
+when we look at the data sheet of irf
+540 mosfet another widely used mosfet
+there is information that a maximum
+current of 23 amps can be controlled and
+a maximum voltage of 100 volts can be
+controlled with it
+the fact that a wide range and much
+greater current and voltage control can
+be achieved with mosfet increases the
+attractiveness of mosfet compared to
+other transistors
+for example you see a dc to dc boost
+converter here the circuit diagram for
+this is basically the same as here
+the amplification process is according
+to the switching speed of the mosfet
+located here
+triggers are made at high frequency
+values at the kilohertz level in this
+way mosfet and shock diodes are
+preferred in order to obtain healthier
+results instead of using normal silicon
+diodes in order to respond to high
+frequency switching speeds in converter
+circuits
+dc to dc converters and motor drivers
+using mosfets naturally get hot because
+very high current flows through them as
+such they need coolers
+we usually see mosfets and circuits as
+fixed to heat sinks that will dissipate
+the heat like you see here
+for example in the motor speed control
+circuit you see on the right here there
+is a heat sink fixed to the mosfet which
+i show with the red arrow
+we can see that there are heat sinks
+connected to mosfets in this dc to dc
+boost converter amplifier converter
+circuit you see on the left well let's
+look at the basic working principle of a
+mosfet now
+here you see a simple motor speed
+control circuit with the circuit diagram
+in the upper left corner
+there is a small dc motor connected to
+the drain pin of the n-channel mosfet
+there is a dc source to drive this motor
+here there is a potentiometer connected
+between the gate and source pins of the
+mosfet to provide the voltage to trigger
+the mosfet
+the reason for connecting a resistor
+between the potentiometer and the mosfet
+is that a reverse current in the mosfets
+does not damage the circuit elements
+connected to the gate pin
+thanks to the resistor here the
+intensity of that current is reduced
+thus the circuit devices connected to
+the gate pin are not damaged if we talk
+about this circuit since there is no
+damage to the potentiometer this circuit
+will work smoothly even if there is no
+resistor
+now when we change the resistance value
+of the potentiometer here a voltage will
+be applied between the gate and source
+of the mosfet
+with this voltage the mosfet will be
+triggered and the current coming out of
+the positive or plus pole of our power
+supply will flow between the drain and
+source pins of the mosfet by following
+the path we have shown with the arrows
+and our motor will rotate with this
+current
+as the trigger voltage will change by
+increasing or decreasing the resistance
+value of the potentiometer the drain
+current will change and the speed of the
+motor will change according to this
+current
+we can also control the motor by
+connecting a power supply that provides
+a constant 5 volt voltage instead of a
+potentiometer
+while the mosfet is triggered above 5
+volts it is not triggered at the voltage
+below
+for a better understanding of this motor
+speed control circuit i built the
+circuit on a breadboard with a 9 volt
+battery we can control the speed of a
+small dc motor with a potentiometer
+thanks to the mosfet in this way
+as here the working principle of systems
+with big electric motor fans is the same
+with mosfet we can control the speed of
+a motor not only with a potentiometer
+but also with a microcontroller as here
+since the resistance value on the gate
+pin of the mosfet transistors is very
+large there is no current flow that is
+the trigger part and the part connected
+to the load are isolated from each other
+as such mosfet can be easily used with a
+microcontroller such as arduino
+thanks to the 5 volt square wave
+received from the pwm signal output of
+the arduino speed control can be done
+easily according to the duty value of
+this signal that is by adjusting the
+expansion and contraction of the signal
+we can make the motor rotate fast or
+slow
+here the resistor connected to the
+source pin of the mosfet provides
+protection for the reverse current that
+may come to the arduino microcontroller
+since mosfets are easily affected by
+static electricity and due to the
+resistor used with it they are generally
+used as driver modules not alone in the
+circuit
+thanks to these modules mosfet
+connections can be made easily in the
+circuit thus ease of use is also insured
+for example microcontroller motor and
+power supply connections can be made
+easily when the mosfet is not a
+standalone mosfet driver circuit module
+as is the case here
+when we look inside this module we see
+the circuit here
+the mosfet driver circuit module is
+formed by combining the required
+resistor and mosfet connections
+thus the digital signal input load
+connection and power connection to be
+connected to the microcontroller are
+gathered on a module to provide ease of
+use
+this is the basic structure and working
+principle of mosfet which is used in
+power electronic circuits and many other
+electrical and electronic circuits
+friends i hope it was helpful and you
+liked it hope to see you in our next
+lesson
+goodbye

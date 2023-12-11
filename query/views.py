@@ -17,15 +17,56 @@ from langchain.chains.question_answering import load_qa_chain
 import json
 from langchain.llms.huggingface_hub import HuggingFaceHub
 from django.views.decorators.csrf import csrf_exempt
+from django.core.files.uploadedfile import InMemoryUploadedFile
+from django.http import JsonResponse
+
+@csrf_exempt
+def fileproc(request):
+    if request.method == 'POST':
+        try:
+            uploaded_file = request.FILES['document']
+            save_path = './query/uploaded_documents/'  # Your desired folder path
+            file_name = uploaded_file.name
+            file_path = os.path.join(save_path, file_name)
+
+            # Save the file to the specified path
+            with open(file_path, 'wb') as destination:
+                for chunk in uploaded_file.chunks():
+                    destination.write(chunk)
+            print(file_name,"saved in the uploaded_documents directory")
+
+            # Your additional processing logic goes here
+            base_name, extension = os.path.splitext(file_name)
+
+            if (extension == ".txt"):
+                print("This is txt")
+                with open(f'./query/uploaded_documents/{file_name}', 'r') as file:
+                    text = file.read()
+                # Split text into chunks
+                text_splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=0, length_function=len)
+                chunks = text_splitter.split_text(text)
+                docs = text_splitter.create_documents(chunks)
+
+                # Convert chunks to embeddings and save as FAISS file
+                embedding = GooglePalmEmbeddings(google_api_key="AIzaSyBysL_SjXQkJ8lI1WPTz4VwyH6fxHijGUE")
+                vdb_chunks_HF = FAISS.from_documents(docs, embedding=embedding)
+                vdb_chunks_HF.save_local(f'./query/uploaded_documents/', index_name=f"{base_name}")
+
+            return JsonResponse({'status': 'success'})
+        except Exception as e:
+            return JsonResponse({'status': 'error', 'error': str(e)})
+    else:
+        return JsonResponse({'status': 'error', 'error': 'Invalid request method'})
 
 
-# Function to extract video id from url
+
 def extract_video_id(url):
     print("This is the url",url)
     # Parse URL
     url_data = urlparse.urlparse(url)
     # Extract video id
     video_id = urlparse.parse_qs(url_data.query)['v'][0]
+    print(f"this is the video id {video_id}")
     return video_id
 
 def say_hello(request):
@@ -86,6 +127,7 @@ def llm_answering(request):
     # Assuming you're using Django for web development
     url = request.GET.get('url', '')
     query = request.GET.get('query', '')
+    print(query)
     # Validate if both 'url' and 'query' parameters are present
     if not url or not query:
         return HttpResponse("Both 'url' and 'query' parameters are required.")
@@ -93,7 +135,9 @@ def llm_answering(request):
     embedding2 = GooglePalmEmbeddings(google_api_key="AIzaSyBysL_SjXQkJ8lI1WPTz4VwyH6fxHijGUE")
     # Adjust the path to your FAISS index directory
     db = FAISS.load_local("./query/vdb_chunks_HF/", embedding2, index_name=f"index{video_id}")
-    llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature": 0.1, "max_length": 65536, "min_length": 32768}, huggingfacehub_api_token="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")
+    llm = HuggingFaceHub(repo_id="tiiuae/falcon-7b-instruct", model_kwargs={"temperature": 0.1, "max_length": 65536, "min_length": 32768}, huggingfacehub_api_token="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")
+    # google/flan-t5-xxl
+    # tiiuae/falcon-7b-instruct
     chain = load_qa_chain(llm, chain_type="stuff")
     docs = db.similarity_search(query)
     response = chain.run(input_documents=docs, question=query)
@@ -142,6 +186,8 @@ def process_youtube_video(request):
     vdb_chunks_HF = FAISS.from_documents(docs, embedding=embedding)
     vdb_chunks_HF.save_local(f'./query/vdb_chunks_HF/', index_name=f"index{video_id}")
     return JsonResponse({'status': 'success'})
+
+
 
 # http://127.0.0.1:8000/query/yt/?query=omega&url=https://www.youtube.com/watch?v=7kcWV6zlcRU&list=PLUl4u3cNGP62esZEwffjMAsEMW_YArxYC&index=5&ab_channel=MITOpenCourseWare
 # http://127.0.0.1:8000/query/ytvid/?url=https://www.youtube.com/watch?v=IcmzF1GT1Qw

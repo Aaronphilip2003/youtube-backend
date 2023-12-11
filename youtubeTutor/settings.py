@@ -24,6 +24,8 @@ SECRET_KEY = 'django-insecure-#6vfvgu_z-=$i#$hg4@yr9i8sttq)h=i0wq%fy=ub=^5r6&722
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
 
 ALLOWED_HOSTS = ['127.0.0.1','.vercel.app']
 
@@ -51,6 +53,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware'
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Add the origin of your React development server
+]
+
 
 ROOT_URLCONF = 'youtubeTutor.urls'
 

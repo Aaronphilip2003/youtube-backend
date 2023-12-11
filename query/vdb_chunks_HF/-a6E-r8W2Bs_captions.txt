@@ -1,0 +1,802 @@
+so I'm not going to waste your time this
+video will be a summary of everything
+you need to know about Google Gemini and
+what we're about to watch first of all
+is of course the trailer that Google
+just released later on the video there
+will be the of course benchmarks which
+are rather surprising and absolutely
+everything you need to know about Gemini
+you know one of the reasons we got
+interested in AI from the very beginning
+is that we always viewed our mission as
+a Timeless Mission it's to organize the
+world's information and make it
+universally accessible and useful but as
+information has grown in scale and
+complexity you know the problem has
+gotten harder so we always knew we
+needed to have a deeper breakthrough to
+make
+progress I've worked on AI my whole life
+because I've always felt would be the
+most beneficial and consequential
+Technology For Humanity human beings in
+our society we have five senses and the
+world we' built and the media we consume
+is in those uh different modalities so
+I'm super proud and excited to announce
+the launch of the Gemini era a first
+step towards a truly Universal AI model
+the Gemini approach to multimodality is
+all the kinds of things you want uh an
+artificial intelligence system to be
+able to do and these are capabilities
+that haven't really existed in computers
+before traditionally multimodal models
+are created by stitching together text
+only Vision only and audio only models
+in a suboptimal way at a secondary state
+Gemini is multimodal from the ground up
+so it can seamlessly have a conversation
+across modalities and give you the best
+possible response Gemini is our largest
+and most capable model it means that
+Gemini can understand the world around
+us in the way that we do uh and absorb
+any type of input and output so not just
+text like most models but also code
+audio image and video what's amazing
+about Gemini is that it's so good at so
+many things as we started getting to the
+end of the training uh we started seeing
+that Gemini was better than any other
+model out there on these very very
+important benchmarks for example each of
+the 50 different subject areas that we
+tested on um it's as good as the best
+expert humans in those areas it's very
+rare that you can work on a technology
+at a foundational level and it
+simultaneously can impact all our
+products we created a family of models
+that can run on everything from mobile
+devices access to data centers Each of
+which is actually Best in Class Gemini
+will be available in three sizes Gemini
+Ultra are most capable and largest model
+for highly complex tasks Gemini Pro are
+best performing model for a broad range
+of tasks and Gemini Nano are most
+efficient model for on device test we
+want to provide the best foundational
+building blocks and then we know um
+developers and Enterprise customers are
+going to figure out really creative ways
+to further refine our Gemini
+foundational models and the potential is
+almost
+Limitless so at Google there's this
+healthy disregard for the impossible and
+that has oriented us to be both bold and
+responsible together as these systems
+become more capable all of those
+capabilities also raise new questions we
+have to think about what it means to
+have an image be a part of for example
+the input because an image might be
+innocuous on its own or text might be
+innocuous on its own but the combination
+could be offensive or hurtful safety and
+responsibility has to be built in from
+the beginning and at Google deep mind
+that's what we've done with Gemini we
+develop proactive policies and adapt
+those to the unique considerations of
+multimodal capabilities we then do
+rigorous testing against those policies
+to prevent the harms that we've
+identified with approaches like
+classifiers and filters if I were to
+look at the foundational breakthroughs
+in AI over the past decade Google has
+been at the Forefront of many of those
+breakthroughs and I think Gemini
+continues that Rich tradition it's been
+an enormous sort of monumental
+engineering task which has been you know
+very challenging but also very exciting
+I have been at Google for quite a while
+and the reason I'm here is really I
+believe in the company's Mission and I
+think Gemini is a great step in that
+overall mission we end up with a world
+that has more knowledge and that people
+have more access to information that
+otherwise would not be available to them
+that's what excites me the chance to
+make AI helpful for everyone everywhere
+in the
+[Music]
+world so now what you're about to see is
+Google's multimodal capabilities one of
+the things that Google has talked about
+previously was exactly how Gemini would
+be focused mainly on multimodal stuff
+and that they would increase
+capabilities of the multimodality this
+example that you're about to watch
+clearly demonstrates how advanced Google
+Gemini's multimodal capabilities truly
+are
+IDE let's start all right testing Gemini
+here we go tell me what you see I see
+you placing a piece of paper on the
+table
+I see a squiggly
+line what about now the contour lines
+are smooth and flowing with no sharp
+angles or Jagged
+edges it looks like a bird to me hm what
+if I had
+this the bird is swimming in the water
+it has a long neck and Beak it is a duck
+yes a duck is a type of waterf in the
+Family inat Day ducks are closely
+related to geese and swans the duck
+appears to be blue this is not a common
+color for ducks however there are some
+breeds of blue ducks these are typically
+not as common as other duck breeds it is
+more common for ducks to be brown black
+or white are you sure what the quack I
+was just talking about a Blue Duck and
+now you're holding one it looks like
+blue ducks are more common than I
+thought would this float I'm not sure
+what material it's made of but it looks
+like it might be rubber or plastic what
+if I tell you it's making a squeaking
+sound oh if it's squeaking it's
+definitely going to float H nice it is a
+rubber duck it is made of a material
+that is less dense than water can you
+teach me how to say this in a different
+language and give me a few
+options ooh can you explain how to
+pronounce the Mandarin one is it y y is
+pronounced with a first tone in Mandarin
+there are four tones which are essential
+to distinguish the meaning of words the
+first tone is a high level tone Oh
+okay the duck is in the middle of the
+ocean there is no land nearby for the
+duck to rest or find food it is unlikely
+to find Ducks here naturally okay based
+on what you see come up with a game idea
+oh and use emojis please how about this
+we can play a game called guess the
+country sure let's do it clue one this
+country is the home of the kangaroo the
+koala and the Great Barrier Reef oh
+that's
+easy clue two this country loves
+football and has won the most men's
+World Cups in football history
+H you were trying to get me to find the
+paper ball under the cup I accept the
+challenge the cup to the
+left
+nice I know what you're doing you're
+playing rock paper
+scissors what do you see now the fingers
+are spread out to look like the wings of
+a butterfly what's this big ear and
+barking mouth a dog
+sweet the coin should be under the right
+hand H I don't know the coin is in the
+left hand using a slight of hand
+technique to make it appear as if the
+coin has
+disappeared both objects are round and
+flat there you
+go both are food the orange is a
+healthier choice than the
+cookie citrus can be calming and so can
+the spin of the fidget
+toy they are both examples of popular
+toys that have been enjoyed by children
+and adults alike for many
+years give me some ideas for what I
+could make with this I see pink and
+green yarn how about a dragon
+fruit or how about a green cake with a
+pink heart okay how about these colors
+and maybe show me some animals
+okay now I see blue and pink yarn how
+about a pig with blue ears or an octopus
+or a bunny with a pink nose ooh I'll
+keep those in
+mind which way should the Duck Go going
+left leads to a duck which is a friend
+going right leads to a bear which is a
+foe it is better to make friends than
+foes so the duck should go left smart
+choice this is a picture of a crab
+that's
+right is this the right order no the
+correct order is sun earth
+Saturn based on their design which of
+these would go faster the car on the
+right would be faster it is more
+aerodynamic which looks more fun the one
+on the right because it has a loop what
+do you think this person might be saying
+how about a woohoo I love that
+I see you're drawing a
+[Music]
+guitar you've added an amp now it's an
+electric guitar we can make some
+seriously loud music
+now given that you added drums how about
+some 80s hair
+[Music]
+metal all right I see you've added a
+palm tree to the drawing change it up
+with some beachy
+[Music]
+Vibes what movie are they acting out
+here I think they are acting out the
+famous bullet time scene from The Matrix
+ooh
+nice what do you think might happen next
+the cat is going to jump to the wall and
+stick The Landing it's going to be a
+perfect
+10 oh and it's a miss it looks like it
+was just a little too far away but don't
+worry the cat is a natural athlete and
+it will be back up there in no
+time okay I've got one more for you
+describe the drawing I made it is a
+simple line drawing of the constellation
+Gemini you did a good job of capturing
+the beauty of Gemini nice that's it I
+think we're
+done now it's time to take a look at one
+of the most important things regarding
+Gemini and that is of course the
+benchmarks now you can see here that
+these are the bench marks compared to
+GPT 4 as it is the next level in large
+language model but currently GPT 4 has
+been surpassed in nearly everything by
+Gemini Ultra we can see that in the
+general capabilities the MML U that
+Gemini Ultra received a 90% And GPT 4
+received an
+86.4% if we scroll down to the reasoning
+tab you can see that on the big bench
+hard on the drop Gemini Ultra achieved
+the better results although maybe only
+marginal it did achieved better results
+in this category the only category it
+didn't was the H swag where it achieved
+a 87. 8% which is of course still very
+respectable if we do look at the math
+benchmarks and the code benchmarks we
+can see that on the GSM 8K Gemini Ultra
+received a
+94.4% compared to GPT 4's 92% on the
+math tasks which include challenging
+problems including algebra geometry
+pre-calculus and others it achieved a
+53.2% compared to gbt 4's 52.9% and on
+the coding with a human eval it achieved
+the 74.4% compared to gbt 4's a 67% and
+on a natural 2 code it achieved a 74.9%
+compared to GPT 4's 73.9% so overall
+Gemini Ultra does surpass GPT 4 in seven
+out of these eight categories which does
+make it right now the very best large
+language model that you can use in the
+AI space so now we have the multimodal
+benchmarks and these are the multimodal
+benchmarks in which Gemini and GPT 4
+were compared against what's really
+incredible was that across every single
+Benchmark on this page Gemini Ultra
+surpassed GPT 4's previous capabilities
+so you can see that across all of the
+image benchmarks Gemini achieved 59% 77%
+82% and 90% and in all of these
+categories it does surpass GPT 4 and
+this is of course GPT 4 with vision
+which is the latest model that can
+analyze images in addition since gp4
+doesn't have video what they've done is
+they've compared Gemini Ultra to deep
+mines Flamingo and you can see that it
+achieved a
+62.7% compared to deep mine score of 56
+which is of course the same model that
+the same company did before it just
+shows a recent Improvement in addition
+what is also very interesting was that
+we did see that even in audio Gemini Pro
+outclasses opening eyes whisper V2 and
+Whisper V3 which shows us that Google
+Gemini is currently a truly
+state-of-the-art large language model
+multimodal AI system now let's take a
+look at Gemini's Ultra impressive
+capabilities in terms of reasoning and
+truly understanding what a user needs
+here you will see a demo of Gemini's
+multimodal reasoning capabilities to
+understand and reason about users intent
+use tools and generate bespoke user
+experiences that go beyond chat
+interfaces let's say I'm looking for
+Inspirations for a birthday party theme
+for my
+daughter Gemini says I can help you with
+that could you tell me what she's
+interested in so I say sure she loves
+animals and we're thinking about doing
+something Outdoors at this point instead
+of responding in text Gemini goes and
+creates a bespoke interface to help me
+explore ideas it's got lots of ideas
+it's visually Rich it's
+interactable now none of this was coded
+up it was all generated by Gemini Gemini
+uses a series of reasoning steps going
+from broad decisions to increasing the
+high resolution of reasoning finally
+getting to code and data first Gemini
+considers does it even need an UI is a
+text prompt best okay this is a complex
+request that needs lots of information
+to be presented in an organized way
+Gemini then tries to to understand if it
+knows enough to help there is a lot of
+ambiguity I didn't see what my
+daughter's interests are or what kind of
+a party I wanted so it had asked a
+clarifying question when I said we're
+thinking about an outdoor party and my
+daughter loves animals Gemini reasoned
+it had enough information to proceed but
+it made a note that there was still
+ambiguity about what kind of animals and
+this is important and what kind of
+outdoor party next is a critical step
+Gemini writes the product requirement
+document or PRD it contains the plan for
+the kinds of functionality the
+experience will have for instance it
+should show different possible party
+themes some activities and food options
+for them now based on this PRD Gemini
+tries to design the best experience for
+the user's Journey it thinks that the
+user will like to explore a list of
+options but will also want to delve into
+details it uses this to design a list in
+detail layout that we saw
+earlier with this design it writes the
+flutter code to compost the interface
+out of widgets and write any
+functionality needed finally it
+generates and retrieves the data needed
+to render the experience you can see it
+filling in content and images for the
+different
+sections ah farm animals she would like
+that clicking on the interface
+regenerates the data to be rendered by
+the codat route oh I know she likes
+cupcakes I can now click on anything in
+the interface and ask it for more
+information I could say step by step
+instructions on how to bake this and it
+starts to generate a new UI this time it
+designs an UI best suited for giving me
+step-by-step
+instructions I want to find some
+suitable kick toppers for those show me
+some farm animal kick
+Toppers at this point Gemini again
+decides to create a visually Rich
+experience it generates a gallery of
+images notice the drop downs at the top
+it decided that maybe should help me
+explore by showing different options
+sheep sounds interesting I know she
+likes that and now it helps me pick
+sheep kicked ERS these look great this
+is going to be a fun birthday party I
+hope you saw a glimpse of what Gemini is
+capable of I'm really excited about
+what's possible here this is such an
+interesting time in Ai and I'm excited
+to be part of this now let's take a look
+at Gemini's Ultra multimodal
+capabilities in terms of helping someone
+with their homework as a parent you may
+have to help your kid with their
+homework I've certainly had to here's
+where Gemini can help for this demo
+we've created a simple interface and
+with some clever prompting under the
+hood we can really leverage Gemini's
+math reasoning and multimodal
+capabilities to learn a subject like
+physics with Gemini you could upload a
+photo of handwritten answers on a
+worksheet not only can Gemini solve
+these problems but this is the amazing
+part it can read the answers and
+understand what was right and what was
+wrong and explain the Concepts that need
+more clarification so Gemini identified
+some mistakes with problems 1 and three
+here let's take a look at
+three here Gemini identifies that the
+formula was correct but there was a
+mistake in calculating height we can ask
+Gemini to explain in more details why
+the height is 50 m instead of
+6 I can ask Gemini to explain
+further here Gemini explains the
+step-by-step details to solving the
+problem because of Gemini's ability to
+understand Nuance information and answer
+questions relating to complicated topics
+it can give you a customized explanation
+of the subject you're trying to learn
+and lastly if you want to learn more you
+can just
+ask
+Gemini will provide personalized
+practice problems based on
+mistakes here I have a similar problem
+where I have to figure out the cat speed
+the height of the r is
+double oh yeah I knew
+that now let's take a look at how Gemini
+finds and extracts data from scientific
+research papers a common problem
+scientists face is a need to find and
+use data extracted from the scientific
+literature
+this is difficult because scientists
+need to search among thousands of
+scientific papers for key information
+and extract them by hand it's a very
+common workflow and very timeconsuming
+in fact some of our scientists at Google
+Deep Mind face this very problem they
+use Gemini to help with it because gini
+has an incredible understanding of
+science Taylor will explain more so we
+were looking at this study from 2022 the
+authors had created a data set by
+reviewing tens of thousands of
+scientific papers and genetics they
+found a few hundred papers that
+contained the relevant information
+extracted it by hand and collected it in
+a table studies like this can take a lot
+of time we needed to update this data
+set with what's new over the last couple
+of years but that's over 200,000 new
+Open Access papers added to this domain
+since 2021 we couldn't do this manually
+so we asked Gemini to help us out first
+we needed to filter for Relevant
+scientific papers we wrote a prompt just
+like this one telling Gemini exactly
+what to look for with its Advanced read
+reasoning capabilities Gemini was able
+to distinguish between papers that were
+relevant to the study and those that
+weren't for the relevant papers we wrote
+a similar prompt asking Gemini to read
+the paper and extract the key data for
+us we could even ask Gemini to add
+annotations this showed us exactly where
+in the paper Gemini found the
+information we ran this at scale and
+over a lunch break Gemini read 200,000
+papers for us filtered it down to 250
+and extracted their data
+so now we have a refreshed version of
+this data set but because Gemini is
+multimodal not only can It reason about
+information from text it can also reason
+about figures so let me show you
+something really neat with our refresh
+data set we can now ask Gemini to update
+a graph from the original study we first
+gave Gemini a screenshot of this figure
+then we asked it to generate the code
+required to plot it and by feeding this
+code our new data set we get our updated
+figure you can see that this figure now
+includes data up until
+2023 so Taylor used Gemini to search a
+large cpose of literature for Relevant
+papers and extract key information from
+these papers as well as update figures
+of course these capabilities can help
+more than just biologists or even
+scientists they extend naturally to any
+domain that is relied on large data sets
+such as law or Finance so that's what
+Gemini can make possible and we are
+excited to see what you will create with
+Gemini so essentially now we're going to
+get into some of the details of Gemini's
+technical report which is essentially
+just the deeper dive into the actual
+model how it works and some of the
+actual capabilities so what we can see
+here is we can see the user's input
+image and the user essentially takes a
+picture with their phone and of course
+they use their voice to talk to Gemini
+and then Gemini essentially responds
+what this person is trying to do here
+they are essentially trying to make an
+omelet so they took a picture of the
+omelet you can see that the model
+responds crack the eggs into a bowl and
+whisk them then of course the person
+then goes and says thank you for the
+instructions I started making my omelet
+does it look ready now it looks like
+it's almost ready you can flip it over
+and then the person asks why is it not
+ready and then it responds it's not
+ready because the eggs is still running
+and then it says what about now it looks
+like it ready now you can take it off
+the heat and serve it so this is a
+simple interaction that you can see how
+AI is about to be embedded into what we
+do on a daily basis definitely making a
+lot of tasks easier with the multimodal
+capabilities so this is is something
+that I find has a lot more applications
+than just large language models which
+are mainly software based when we have a
+model that is this capable in terms of
+its image recognition and being able to
+combine that it presents for a really
+nice experience for the user one thing
+that I did want to understand was I did
+want to understand exactly what the
+context length for Gemini exactly was
+here you can see that it tells us that
+the context length for Google Gemini is
+of course a 32 context length so Gemini
+models are trained to handle very long
+sequences of data specifically 32,000
+768 tokens which essentially enables
+them to utilize the context more
+effectively the effectiveness of the
+models with long context lengths was
+tested using a synthetic retrieval test
+this involves placing a key value pairs
+at the beginning of a long string of
+text then checking if the model can
+accurately retrieve the value when given
+the key even with a lot of intervening
+text now what was also incredible about
+this was that it showed the correct
+value with 98% accuracy when queried
+across the full context length now as
+the sequence position increases meaning
+you as you go further into the text the
+nll decreases indicating that the model
+can effectively use the context
+information throughout the entire length
+of the text up to the full 32k token
+length so in essence this section is
+highlighting the model's Advanced
+capability to handle and retrieve
+information from very long text which is
+an significant improvement over models
+that could only handle much shorter text
+now here we have some more stuff on
+reasoning and code generation now this
+is going to look IR really similar to
+what we saw in GPT 4 before so this is
+quite interesting we have something that
+says create a web app called OPM search
+and then essentially we were given it
+five instructions every time you make
+the search query it should redirect you
+to a Google search with the same query
+but the word oosome before it it should
+be visually similar to Google search
+instead of the Google logo it should
+have a picture of for the opposum for
+the internet and it should be a single
+HTML file no separate JS or css files it
+should say powered by Google search in
+the footer then of course we can see
+that on the next slide here this is
+exactly what we got and of course this
+is something that does work remember
+this is being powered by their powerful
+Alpha code 2 which does involve search
+and planning capabilities then of course
+we have multimodal question answering it
+says do you know what this plant is how
+do I best take care of it and of course
+we can see that it gives us a detailed
+answer on exactly what this plant is and
+how best to take care of this now this
+does have a very nice capability in the
+sense that being able to identify
+exactly which plant is what and all the
+specifics is something that is going to
+help a lot of people out combined with
+the knowledge of millions of different
+plants we can see exactly how good this
+model is going to be for various
+different use cases then of course we
+have interleaved image and check
+generation so it says please create a
+blog post about a trip to New York where
+a dog and his owner had lots of fun
+include a few pictures of the dog
+happily posing at different landmarks so
+this is where we can see that this is
+something that is generating IM images
+and is able to follow the instructions
+of generating a blog post closely
+related to the text and showing us
+levels of consistency with the dog
+across all images so I find something
+like this really really effective
+because once again it's showing us that
+when you combine that multimodal
+capability we are going to have
+something that is far superior to
+previous language mod you can't actually
+do this in GPT 4 in terms of the
+consistency so this is definitely a step
+up from what we've seen previously then
+of course we have in information seeking
+about objects and we can see solving a
+puzzle using multimodal inputs it
+recognizes the objects in these images
+and identifies a commonality that
+connects the two objects then of course
+we do have chart understanding and
+reasoning over data and this is actually
+something that Google was really good at
+I did test bod yesterday and made a
+complete tutorial on how to use bod and
+when I did test it it actually did
+really really well at retrieving data
+from charts and then interpreting it
+into that so it actually says spot a
+data point that stands out in the charts
+and what that implicates then produce a
+detailed markdown table for all the data
+shown then we can see here that it shows
+us the exact data in this table and it
+says that the data point that stands out
+is the United States landfill plastic
+waste which is 73% so it shows us that
+this definitely has some really really
+Advanced capabilities in terms of the
+multimodal chart understanding then of
+course we do have one of my favorite
+capabilities and this is of course the
+video understanding we can see that the
+user put in this question how could this
+doesn't improve their technique then of
+course we have Gemini saying that this
+soccer player needs to work on their
+ball striking mechanics their foot is
+not making good contact with the ball
+which is causing the ball to fly up and
+away from the goal they also need to
+work on their body positioning and they
+should be leaning into the shot with
+their non-kicking leg in front of their
+kicking leg and they should be following
+through with their kicking leg the
+Gemini is actually completely multimodal
+and this video was input and this output
+that they gave was pretty stellar so if
+you've ever played soccer or if you've
+ever played football in the UK you'll
+know that exactly what they're saying is
+pretty true and that technique that
+they're using is actually not accurate
+whatsoever so I'm really really excited
+to be getting to use Gemini and seeing
+exactly how good those video
+capabilities are now here we need to
+know and take a look at what is next for
+Google Gemini because apparently this is
+only the beginning so hassabis says
+Google Deep Mind is already looking into
+how Gemini might be combined with
+robotics to physically interact with the
+world to become truly multimodal you'd
+want include touch and tactile feedback
+he says there's lots of promise with
+applying these sort of foundation type
+models to Robotics and we're exploring
+that heavily so it seems like the future
+of Humane robotics or some kind of
+Robotics are going to be combined with
+some kind of foundation model in order
+to provide an ability for these large
+language models or AI systems to
+interact with the world in a new way
+which definitely would be a very
+interesting thing because it's not
+something that we've seen done to a very
+high level just yet in addition what's
+crazy was that they did talk about next
+year so this is an article from the wide
+that I'll leave a link to in the
+description and essentially the article
+reads for AI agents to work dependably
+the algorithms powering them need to be
+a lot smarter openi is working on a
+project du qar that is designed to
+improve the reging capabilities of AI
+models perhaps using reinforcement
+learning the technique at the heart of
+alphao aabis says his company is doing
+research along similar lines which is
+something that we did talk about 6
+months ago where aabis actually did
+state that they are focusing on
+searching and planning he additionally
+goes on to state that we have some of
+the world's best reinforcement learning
+experts who invented some of this stuff
+and then it goes on to State advances
+from alpha go are hoped to help improve
+planning and reasoning in future models
+like the one today then he States we've
+got some interesting Innovations we're
+working on to bring to Future versions
+of Gemini and you'll see a lot of Rapid
+advancements next year now I really want
+to break this statement down because you
+can miss some of these key statements if
+you don't look into the words that he
+used he said we've got interesting
+Innovations and Rapid advancements so
+that's two key things number one is the
+Innovations part now Innovations is a
+key word because he didn't say that
+we're going to make these models better
+what he said is we're going to be doing
+Innovations now what that means is that
+we're likely to see something new and
+likely something that we've never seen
+before which essentially makes next year
+a really fascinating year for anyone in
+AI because we're going to see a lot of
+different models and a lot of new
+techniques that we've never seen before
+you have to remember what they've done
+with Alpha go and previous models to
+truly understand the capabilities of
+Google Deep Mind and them also saying
+that you'll see a rapid advancements
+next year shows us that we definitely
+are in for a crazy 2024

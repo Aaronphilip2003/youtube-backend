@@ -1,0 +1,453 @@
+the saturn v rocket took humans to the
+moon for the first time but the humans
+didn't steer the rocket
+it steered itself using a computer
+a lot of the saturn v rocket was built
+here in huntsville alabama otherwise
+known as rocket city and one of the
+really cool things about living here
+is it's filled with aerospace and
+computer engineers who love this stuff
+so a thing you can actually do here is
+pick up the phone and call one of your 
+friends
+and have them call their friend and
+before you know it you're in a parking
+lot
+receiving a saturn 5 memory module from
+a guy you just met
+and he just trusts that you're going to
+give it back to him this is 14
+kilobytes of data which is really
+interesting because
+the same day i got this i had linus
+sebastian from linus tech tips here
+we were installing a server that was
+over 100
+terabytes now millions of people look to
+linus to understand
+more about modern computing hardware so
+i thought a really cool thing to do
+would be stop what we were doing with
+the server
+and take a closer look at this memory
+module and how it works
+let's sit back and watch a modern
+computer nerd learn
+about the cutting edge technology from
+the 1960s
+i'm destined let's go get smarter every
+day have you ever seen a saturn v rocket
+no
+okay do you know what the saturn v is
+yes my daily
+life literally revolves around the
+saturn v like that's right that's the
+saturn v
+peeking out over the trees right there
+oh there it is hello
+in the 60s they had just started
+building digital computers
+and i'm going to show you the computer
+that they used to to steer that thing
+i mean it's got to be a bit of a
+terrifying experience having like
+you know the equivalent of a very large
+bomb strapped to your butt
+so this is the brain for the saturn v
+rocket
+if you look up right here this is
+the instrumentation ring and so they had
+computers on here
+that were digital this right here is the
+launch vehicle
+digital computer that is it this
+right here is a memory module okay
+and if you look really really really
+close really close
+you see those little bitty rings yeah
+okay look right here
+look at that do you see that
+holy smokes so they're just
+it looks like zip ties on chicken wire
+okay
+those are bits those are physical bits
+so you see that screen yeah these are
+wires that go down to these boards right
+here right
+yeah on each node you have
+an iron ring and depending on how the
+iron ring is magnetized that's a one or
+a zero
+that's how they programmed this computer
+seriously so look at this right here so
+by hand by hand yes they threaded
+these wires through the
+i mean who has a steady in it like i
+don't even think you could build one of
+these today if you wanted to
+that's incredible so there's a guy that
+worked on this in the 60s here his name
+is luke
+yeah and uh you get to ask him all of
+these questions
+fantastic i'm luke talley and at this
+time in 1969 i was a senior associate
+engineer
+at ibm in huntsville so your computer
+pointed the rocket
+that's right awesome we steered the
+rocket that's a memory module
+it's a whole memory module yeah you must
+have shot somebody to get that
+so how valuable is that i don't know i
+have no idea you have to go to antique
+roadshow this computer controls all the
+timing start engine
+stop engine fire separation rockets fire
+retro rockets all this kind of stuff
+it does navigation and guidance you have
+stored in the memory of profile at this
+point in time i need to be here going
+this fast going in this direction
+now realize that this is core memory
+so you have these magnetic cores you
+have the wires feeding through the cores
+you push a current down through a wire
+all right if you got a wire
+if current's going in that direction the
+magnetic field is going to be in this
+direction if it's going this way it'll
+be that way make that a one make that a
+zero
+there's eight thousand one hundred and
+ninety two of those on this plane
+all right yeah then there's fourteen of
+those planes stack up to make this
+module
+this module is what you're holding all
+this stuff now
+the drivers to drive this that's just to
+process it
+because this is basically an analog
+process
+right i'm not writing ones and zeros
+into a logic gate and storing them that
+way
+i'm actually having to make magnetize a
+core one way or the other
+and then i've got to read it and when i
+read it i destroy the magnetization so i
+have to turn right back around
+and write it back in there so that it's
+not missing
+oh no so there's one of these in this
+and then there's one of these now in
+each one of these blocks on this wall
+over here
+got it so so we have 4 8 12 16
+000 words of memory another four eight
+twelve sixteen thousand words of memory
+now when the saturn's flying both of
+these memories are executing the same
+flight program
+completely in parallel that's right and
+they're comparing the outputs to make
+sure they're getting the same answer
+if they were to not get the same answer
+go into subroutine and say i'm at this
+point in the flight i got these two
+numbers what makes the most sense
+to keep using use that number and keep
+going so your critical parts are triple
+redundant than the logic
+dual redundant in the memory as i recall
+during all the saturn flights we had
+like less than 10 miscompared something
+like that it was a very small number
+when you're building a rocket you have
+some important parameters that you have
+to monitor
+power data bandwidth mass volume you
+have to manage these so they don't get
+out of control
+so you want a reliable system but at
+some point you have to make a decision
+how redundant is redundant enough
+unreliability
+that's the key because the more these
+things more
+cores you add the more of this stuff you
+need the more
+unreliability you add to your system
+because sheer numbers of parts
+right luke is about to explain what it
+was like to receive data from the saturn
+5 via telemetry and then analyze it and
+i'm going to let this play out because i
+want you to understand how repetitive
+and difficult this task was today we
+could do this with just a few minutes
+and some spreadsheet software
+but back in the day they were the
+computers like the people
+were the computers so i want you to see
+it through his eyes through this
+historical lens so you understand what
+it was like
+to analyze the saturn v data so did you
+pull the data down why it was flying
+things happen too quick in flight too
+how do you know you had we get the data
+back
+and then we analyze that was my job at
+ibm as we were
+analyzing the flight data to determine
+what worked what didn't work
+if it didn't work on this flight how do
+we fix it on the next flight
+and then when you get the nasa
+requirements for the next flight make
+sure we got everything
+in place to do what we are supposed to
+do so the data tapes come from all
+around the world through goddard space
+flight center is responsible for that
+so they get us the data and then we
+analyze it and determine what happened
+something would go wrong in the computer
+and it always goes wrong when something
+else is messing up the telemetry system
+so we would actually get what they call
+an octal dump we have this 11 by 17
+sheet of paper
+10-bit octal numbers so you'd have there
+were four characters
+like zero to seven sides you go with
+octal arithmetic
+so you got all these things i think it
+was like maybe
+40 columns and 30 rows something like
+that
+so we would get this thing printed out
+and all it's just numbers
+well the piece we're looking for is at a
+particular place down here
+well the dropout is where we you know
+telemetry dropout so we would actually
+get this printed out
+11x7 fan fold paper spread it down this
+hallway get down on your hands and knees
+make a template
+cut out you'll have a number of
+measurements that'll always be the same
+you know
+right like a voltage that never changes
+yeah so we know what those numbers ought
+to be
+so we cut the holes out and slide it
+down
+page by pi oh hey these all look good
+okay this frame is probably good
+so we go find so many columns so many
+rows find the number we want write it
+down
+so you're looking for one that if it
+bungs up something that you know is a
+fixed value
+then it probably bunged up something
+else that's right and if
+if the fixed value is okay then
+somewhere in there our number is
+probably okay and then once you've got
+the problematic one i mean is that just
+the world's nastiest sudoku puzzle or
+well how do you solve that
+you may have you may have to do this for
+many many many frames then you take it
+to your desk
+and take those octal numbers convert
+them to decimal numbers go to a
+calibration
+chart and say okay i got this number
+yeah go up my chart so that means it's
+five degrees centigrade
+so you write down five degrees and you
+figure out what frame you are that's
+about what time it is so
+at this time i had five degrees then you
+go to the next one now you do this for
+about two weeks and finally you got
+enough to
+plot a graph by hand so you put all
+these numbers in and you plot it by hand
+and then you say hmm that wasn't a
+problem after all oh well here we go
+again
+so oh boy this is ed hi this is the
+headquarters
+how are you this is kind of an in the
+hand example of the
+memory course that you can see woven
+into the spread here and then kind of
+under the magnification over here
+and there's about eight or nine of them
+in there so like luke was saying when
+you run the current through there it
+starts to spin that donut in a
+particular direction and that tells you
+whether it's the one or the zero
+and you're saying they were woven on by
+hand it was primarily women that did the
+work
+um that had basically a bench top so
+they would have like textile industry
+experience i guess
+um or i actually am not certain what
+their qualifications were
+but they would sit with a benchtop with
+this thing mounted in a holder
+yeah with copper wire lengths and
+tweezers and their fingers and a
+lot more patience than i have um to weed
+these things through there to make sure
+that they went through appropriately no
+kinks
+no bends that were out of a speck and to
+actually make sure that the
+little donuts go into a cross you know
+the way they should and that was all
+uniform so everything would be
+predictable behavior incredible too i
+just wanted you to hold a physical bit
+now you know what that's like yeah yeah
+i mean this is this is more than eight
+bits so this is i'm holding at least a
+bite
+think about it that way so when you look
+at this what what kind of emotion do you
+feel when you when you look at this
+luke do you do you are you is it
+fondness or is it more just uh
+thank goodness i don't have to work on
+that bloody thing anymore no i'm going
+to
+talk to one of my buddies when you go
+out the building here get you in the
+head
+to get this thing yeah no that that's uh
+that's a real piece of work you know and
+it looks
+to people that come in here they say
+this this just looks so
+much like an antique but again we only
+had a few failures
+during the whole flight that were
+intermittent
+we never had a catastrophic failure
+people might say antique but
+uh i would say handcrafted yes there's a
+lot of hand work went into these oh you
+can tell i mean
+even just even even these are these
+they're clearly hand baked
+they've got the goop on them because the
+big problem with this thing is vibration
+though the memory that we were looking
+at over there
+they test and test and test on that
+thing to make sure
+that you hadn't got a kink in a wire or
+twist because if you do
+the vibration is going to cause it to
+break those things were made by hand the
+ladies actually
+wove these things like you're weaving a
+piece of claw
+pretty amazing oh this is fascinating
+thank you very much by the way i want to
+say thanks to the sponsor today which is
+audible i'm about to recommend
+a 13-hour audio book about salt and
+you're gonna think i'm crazy but i'm not
+because it's amazing
+this is a book called salt a world
+history by mark kurlansky
+and it is amazing like everything from
+natron in the egyptian desert
+to why civil war battles were fought the
+way they were because
+there were certain salt works in certain
+locations to why
+gandhi walked to the ocean and it also
+tells you about
+like garum in which is a roman sauce
+that was like
+roman ketchup that we don't know how to
+make anymore this audiobook
+is amazing and you should listen to it
+you can get it by going to audible.com
+smarter or texting the word smarter to
+500 500
+i know it would make more sense to like
+recommend an audio book about space
+but this is what i'm actually listening
+to and it's incredible so
+audible.com smarter or text the word
+smarter to 500 500
+get your first audio book for free plus
+two free audible originals
+when you try audible for 30 days by
+using these links audible.com
+smarter you will love this book please
+do that that supports smarter every day
+when you support smarter every day
+it lets me do more videos about the
+stuff i love if you want to see more of
+this interaction between
+linus and luke it's incredible like on
+the second channel
+there's a 30 minute video of luke going
+all the way down the rabbit hole
+this guy knows his stuff like i feel
+like i know rockets pretty well
+linus certainly knows computers but when
+we're sitting there it's almost like
+luke could just run around both of us go
+check that out on the second channel
+also
+go check out linus's channel up actually
+i'll just let linus do an outro himself
+go check out linus's channel linus tech
+tips
+he's talking about what's it called
+again the instrument unit uh basically
+we talk a little bit about the computer
+but destin's got a little more
+information on that but
+i really love the cooling system on this
+thing it's going to blow your guys's
+mind
+it's awesome so it's at the top of the
+rocket because as you've got all three
+stages of the saturn v
+you need your instrument unit way up
+here so you can guide the saturn v
+before the apollo computer takes over
+but linus talks about details of power
+and how that stuff works it's pretty
+cool
+yeah thanks dude appreciate it guys
+thank you
+thanks guys thank you
+for something it's called space camp
+space camp yeah so all those kids are
+here to
+learn how to be astronauts and fighter
+pilots
+that's luke no that's luke
+yeah no way yeah
+on the lefter apparently that's pretty
+cool huh
+luke talley there it is far left
+that's nice it's pretty neat in it
