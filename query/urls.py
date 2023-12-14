@@ -7,4 +7,5 @@ urlpatterns=[
     path('llm/', views.llm_answering, name='llm'),
     path('ytvid/', views.process_youtube_video, name='ytvid'),
     path('fileproc/', views.fileproc, name='fileproc'),
+    path('answerfile/', views.answerfile, name='answerfile'),
 ]
