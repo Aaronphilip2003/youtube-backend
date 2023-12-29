@@ -20,6 +20,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.http import JsonResponse
 import re
+from langchain.document_loaders import PDFMinerLoader
+from langchain.document_loaders import UnstructuredPowerPointLoader
 
 @csrf_exempt
 def fileproc(request):
@@ -52,6 +54,36 @@ def fileproc(request):
                 embedding = GooglePalmEmbeddings(google_api_key="AIzaSyBysL_SjXQkJ8lI1WPTz4VwyH6fxHijGUE")
                 vdb_chunks_HF = FAISS.from_documents(docs, embedding=embedding)
                 vdb_chunks_HF.save_local(f'./query/uploaded_documents/', index_name=f"{base_name}")
+            
+            elif (extension == ".pdf"):
+                print("This is pdf")
+                print(file_name)
+                docs=PDFMinerLoader(f"./query/uploaded_documents/{file_name}").load()
+                print(docs)
+                # docs = text_splitter.create_documents(chunks)
+                # Split text into chunks
+                text_splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=0, length_function=len)
+                chunks = text_splitter.split_documents(docs)
+                # Convert chunks to embeddings and save as FAISS file
+                # embedding = GooglePalmEmbeddings(google_api_key="AIzaSyBysL_SjXQkJ8lI1WPTz4VwyH6fxHijGUE")
+                embedding2 = HuggingFaceEmbeddings()
+                vdb_chunks_HF = FAISS.from_documents(docs, embedding=embedding2)
+                vdb_chunks_HF.save_local(f'./query/uploaded_documents/', index_name=f"{base_name}")
+
+            elif (extension == ".pptx" or "ppt"):
+                print("This is ppt")
+                loader = UnstructuredPowerPointLoader(f"./query/uploaded_documents/{file_name}",mode="slides")
+                print(f"/query/uploaded_documents/{file_name}")
+                docs = loader.load()
+                print(docs[0])
+                # text_splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=0, length_function=len)
+                # chunks = text_splitter.split_documents(docs)
+                # # Convert chunks to embeddings and save as FAISS file
+                # embedding = GooglePalmEmbeddings(google_api_key="AIzaSyBysL_SjXQkJ8lI1WPTz4VwyH6fxHijGUE")
+                # vdb_chunks_HF = FAISS.from_documents(docs, embedding=embedding)
+                # vdb_chunks_HF.save_local(f'./query/uploaded_documents/', index_name=f"{base_name}")
+
+                
 
             return JsonResponse({'status': 'success'})
         except Exception as e:
@@ -63,17 +95,16 @@ def answerfile(request):
     user_message = request.GET.get('query', '')
     file_name = request.GET.get('name', '')
     base_name, extension = os.path.splitext(file_name)
-
-    if (extension == ".txt"):
-        embedding2 = GooglePalmEmbeddings(google_api_key="AIzaSyBysL_SjXQkJ8lI1WPTz4VwyH6fxHijGUE")
-        # Adjust the path to your FAISS index directory
-        db = FAISS.load_local("./query/uploaded_documents/", embedding2, index_name=f"{base_name}")
-        llm = HuggingFaceHub(repo_id="tiiuae/falcon-7b-instruct", model_kwargs={"temperature": 0.1, "max_length": 65536, "min_length": 32768}, huggingfacehub_api_token="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")
-        # google/flan-t5-xxl
-        # tiiuae/falcon-7b-instruct
-        chain = load_qa_chain(llm, chain_type="stuff")
-        docs = db.similarity_search(user_message)
-        response = chain.run(input_documents=docs, question=user_message)
+    embedding2 = GooglePalmEmbeddings(google_api_key="AIzaSyBysL_SjXQkJ8lI1WPTz4VwyH6fxHijGUE")
+    # embedding2 = HuggingFaceEmbeddings()
+    # Adjust the path to your FAISS index directory
+    db = FAISS.load_local("./query/uploaded_documents/", embedding2, index_name=f"{base_name}")
+    llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature": 0.1, "max_length": 65536, "min_length": 512}, huggingfacehub_api_token="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")
+    # google/flan-t5-xxl
+    # tiiuae/falcon-7b-instruct
+    chain = load_qa_chain(llm, chain_type="stuff")
+    docs = db.similarity_search(user_message)
+    response = chain.run(input_documents=docs, question=user_message)
 
     # Add CORS headers to the response
     response = JsonResponse({'response': response})

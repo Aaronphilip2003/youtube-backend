@@ -1,0 +1,321 @@
+rust will make you hate JavaScript while
+I was learning rust I couldn't help but
+notice the same comment Everywhere by
+former JavaScript developers in this
+video I'll walk you through five key
+Concepts you need to understand as a
+JavaScript or typescript developer
+learning rust and if you stick around to
+the end I'll give you four foolproof
+steps to start learning rust today rust
+has been the favorite programming
+language for a record eight years in a
+row in the stack Overflow survey and
+rust is also infiltrating the JavaScript
+ecosystem we've got turbo pack RS pack
+swc and lightning CSS even existing
+tooling is moving to rust both vit and
+parcel are transitioning critical pieces
+to rust and Tailwind has planned to move
+its default parser to rust now aren't
+you curious could you learn rust as a
+JavaScript developer it might be easier
+than you think let's cover these five
+highlevel Concepts one by one I wish I
+would have known before learning rust
+we'll mostly avoid syntax for now but I
+think you'll find that if you understand
+these Concepts this syntax will come
+much easier to you the first key concept
+is that rust is a compiled language in
+other words there's no runtime that
+executes rust code if you're familiar
+with typescript it's a similar process
+since the browser can't read typescript
+you use Babel or some other tool to
+transpile your code to vanilla
+JavaScript rust doesn't Target your
+browser however but your system so
+you'll need to build your code to
+compile it to a performant executable
+before running it memory
+management how rust manages memory is
+one of its distinct features most
+languages either handle memory for you
+like javascript's garbage collector or
+give you complete control over memory
+management like C or C+ plus these two
+memory choices are opposite trade-offs
+garbage collected languages are often
+less error prone as you don't typically
+have to worry about seg faults buffer
+overflows and the like but you sacrifice
+your ability to control allocation and
+deallocation of memory rust follows a
+third option called the ownership model
+which gives you control over memory but
+puts up guard rails to help you avoid
+many common pitfalls in memory
+management you still manage the memory
+but rust checks your choices against
+guiding rules if you violate a rule rust
+won't compile your program so what what
+are these rules there are two essential
+ones first each value in Rust has a
+variable that's called its owner it's
+responsible for the value and very
+importantly there can only be one holder
+or owner of each value at a time here I
+have a string Chris currently the
+variable name is the owner I can pass
+that value to my function print string
+but at that point the function now owns
+the value and that brings us to the
+second rule when the owner goes out of
+scope the value is dropped from memory I
+can't then access the list again in the
+main function so name owns the string
+then it's passed to print string which
+is now the new owner and finally once
+it's printed the string is removed from
+memory since its owner is out of scope
+in JavaScript the value would live on in
+memory until the garbage collector
+clears it which can be ambiguous in Rust
+it's very clear when the owner moves out
+of scope the memory is deallocated these
+rules are the special sauce to memory
+management and rust now I know what
+you're thinking wait a second how can I
+ever pass any values without changing
+their owners that's where references and
+borrowing enters while values cannot
+have mult multiple owners functions and
+other calls can borrow references to
+values which belong to other owners
+again here rust is explicit you add an
+an% to a referenced value we're getting
+a little ahead of ourselves but
+borrowing a referencing a value can
+happen in two different ways and here I
+think an example would help if I let you
+borrow my car I'd expect you to return
+it in the same condition that would be
+immutable borrowing you can borrow it
+but you can't change it if you were my
+mechanic borrowing my car though I may
+say hey if you find anything you want to
+improve while you have it go for it that
+would be a mutable reference and in
+other words you can change it with
+either type of reference though I'm
+still the owner and you're only
+borrowing in this case names an
+immutable reference I let the function
+use the string but it's not allowed to
+change it in any way since the owner
+retains the value that also means I can
+pass a reference twice in a row as the
+owner is still name this brings us to
+variables and
+mutability in Rust all variables are
+immutable by default in other words they
+cannot be changed to mutate a variable
+you have to explicitly mark it as
+mutable with a mute keyword so for
+instance if you wanted to pass a mutable
+reference to name you'd add mute and now
+the reference is mutable meaning that
+print string can change the value while
+it's borrowing it and since the variable
+name still owns the string I can pass
+the mutable reference to print string a
+few times in a row and practice let by
+itself works like const in JavaScript
+while let mute works like let in
+JavaScript since rust is explicit it's
+easy to tell whether or not something
+can be mutated it's not dependent on the
+type like if it's an object it's if it
+has that mute keyw so here count cannot
+be modified until I add the mute keyword
+as a JavaScript developer you may be a
+bit claustrophobic right now hang in
+there we're used to changing around
+nearly any variable but that flexibility
+introduces a lot of bugs for example if
+you pop the last item from an array
+you've also mutated the array in place
+and you just have to know which methods
+mutate and which methods copy here we've
+mixed a specific value the last item in
+the original array with a mutated value
+the altered array does last item mean
+the last item in the original array or
+the mutated one you'll have to manually
+track down the reference in JavaScript
+in Rust though we'll see two differences
+first you have to mark the array with a
+mute keyword only then can you mutate
+its values but the change is explicit
+and clear the second difference is that
+you cannot mix mutable and inmutable
+references you can either have a single
+mutable reference or any number of
+immutable references for this reason
+some Rust developers call references
+exclusive mutable and shared immutable
+that was a lot mutability references
+ownership compiling let's take a quick
+break and look at a few things that will
+look very familiar to you as a
+JavaScript developer when rust was being
+developed they built its package manager
+cargo based on the best parts about mpm
+so it feels very much like mpm but with
+superpowers it handles packages test
+running compiling and more there are
+lots of other similarities too instead
+of a package.json file you have a cargo.
+tommo file instead of packages you have
+crates and you can explore all 130,000
+plus of them at crates.io an online
+registry like npmjs.com but you'll
+notice a lot of other similarities like
+the comments syntax destructuring async
+await Imports exports and more let's
+jump back into the overview by looking
+at this fourth key concept types now if
+you're familiar with typescript this is
+going to look very similar in syntax
+however rust gives you way more options
+and actually enforces the types it's a
+static and strongly typed language in
+plain English this means every value
+must have a type either inferred or
+declared and that type is enforced at
+compile time sorry you can't just Co
+numbers into Strings whenever you feel
+like it without explicitly marking that
+change like typescript rust can often
+infer types for you for instance it can
+infer that my num is an i32 and my name
+is a string slice while using the
+inferred types is often sufficient you
+can provide more Direction with an
+explicit declaration and rust gives you
+lots of options you don't need to know
+them all by heart when you first start
+learning but as a brief example instead
+of the single number in typescript Rust
+gives you size specific options for
+integers and floating points so that's
+what more than 20 different number types
+for typescripts one number type but why
+you can control how much memory is
+reserved with each type instead of the
+inferred i32 which reserves space for
+numbers from about -2 million to
+positive2 million as the I means signed
+in other words it can be positive or
+negative I can type this number as a u8
+which reserves space for a number from
+only 0 to positive 255 as the u means
+unsigned that's quite a memory
+improvement there are lots of other
+types like strs which are custom data
+types that look and act very similar to
+JavaScript objects enums which are lists
+of fixed named values and more again the
+specific syntax here isn't super
+important at this stage in your journey
+just know that you have to give
+everything a type either explicitly or
+implicitly and that you have lots of
+options this also means there's no any
+in Rust sorry I know and there's not
+even a null type that's because rust
+forces you to handle all possible errors
+at compiled time and that's our final
+topic error
+handling no language removes the
+possibility of errors but rust forces
+you to handle them rust divides all
+errors into two categories unrecoverable
+and recoverable unrecoverable errors are
+errors that should stop your program
+which rust will do with a panic macro
+your program will stop immediately and
+produce a trace to the air for
+recoverable errors rust provides lots of
+tools to force you to handle any
+possible issues let's talk about just
+two matching and the result type we'll
+call the divide function and pass in two
+integers note the match keyword match is
+like a switch statement but it forces
+you to exhaustively handle all possible
+cases when the divide function runs
+we'll get back a result type which has
+two possibilities okay or error in this
+example will log either option the
+divide function then returns an error if
+trying to divide by zero and the result
+for any other value you may notice that
+you don't have to say return the final
+expressions in both the if and else
+blocks return automatically
+understanding these five conceptual
+differences will Prime the path for your
+learning rust now I promised you four
+learning steps unlike the jungle of
+YouTube videos random MDM docs and
+coding tutorials with 20 ways to do
+everything in JavaScript and this is
+going to blow your mind rust gives you a
+defined learning path start by going to
+rust l.org learn here you'll see three
+steps the book is a comprehensive
+getting started guide for the language
+there's even a new interactive
+self-guided version of the book with
+quizzes and fun projects along the way
+second there's an official course that
+focuses on syntax and runs directly in
+your terminal you can even run it in
+your browser solve each syntax error to
+move to the next level third rust by
+example is a collection of examples that
+show how rust Works in practice each
+example is heavily documented to walk
+you through the concepts using actual
+code examples before I mention one final
+step for learning rust did you know that
+there's official editor tooling with
+helpful tips display errors and more
+built right into your favorite editor
+rust also includes a built-in formatter
+that acts like prettier a lter that
+works like es lent and since rust is
+static and strongly typed every crate
+has full documentation at docs.rs rust
+feel safe to write because it has clear
+guidance and strong opinions on how you
+should learn write and run your rust
+code the fourth and final tool is the
+standard Library documentation it's
+famous for its clear description of all
+built-in rust apis if you ever get stuck
+this example Rich guide will have the
+answers and teach you rust along the way
+so there you have it a brief survey of
+the concepts you'll need to understand
+as a JavaScript developer learning rust
+along with a clear learning path once
+you learn rust spin up a full stack
+website with leptos or rocket build a
+command line tool with clap make a game
+with
+or anything else and if you're
+interested in more tutorials on rest let
+us know below thanks for watching
