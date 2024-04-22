@@ -1,0 +1,44 @@
+one hot encoding is a way of
+representing categorical values in a
+numerical way how does it work we create
+an array that has as many elements as
+the number of categories to represent
+the category we have an array that
+consists of zero everywhere except the
+element that corresponds to this
+category in that location the value is
+1.
+and why not just show them in numbers
+because numbers have an ordinal
+relationship between them meaning 3 is
+greater than 2 and 5 is lower than eight
+but categories do not necessarily have
+this relationship if Category 3
+represents sweater and Category 5
+represents genes it does not mean that
+genes are greater than sweaters machine
+learning models make sense of the data
+that is given to them based on
+mathematical equations if we provide
+categories to a machine learning model
+in numbers the model will assume the
+relationship between these numbers
+represent the relationship between the
+categories and that will not be correct
+and any other way to represent one HUD
+encoding well you can also use dummy
+variables dummy variables use an array
+of length n minus 1 instead of n when
+representing the categories n being the
+number of categories it uses an array
+that consists completely of zeros to
+represent one of the categories
+for example if cat is 0 1 and dog is one
+zero and the only other category out
+there is Turtle it can be represented as
+zero zero once you prepare your data you
+will need to split it into train test
+and validation data sets watch this
+video to find out why and how we
+separate our data sets into sub data
+sets

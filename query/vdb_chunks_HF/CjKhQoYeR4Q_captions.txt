@@ -1,0 +1,623 @@
+what's up everybody it's Travis here
+from travisdom media so I've been
+telling you all for a while now to get
+into the cloud if you're a developer
+especially a new developer trying to
+break into the industry you need to be
+Cloud competent you need to create an
+AWS account get in there get your feet
+wet maybe go on to get certified but you
+need to be Cloud competent every company
+is in the cloud in some sorts or making
+their way to the cloud and it's expected
+of you to have some knowledge of it and
+I've had videos on this how to get
+certified I have a blueprint where you
+can learn Python and AWS at the same
+time but I have one main question that
+comes up and it's around cost like how
+do I sign up for AWS play around with
+all of the resources and not spend a
+fortune doing so and it's a little bit
+intimidating at first compared to
+something like digitalocean or lenode or
+some other service that makes it really
+easy like you get an AWS and it's just
+super complicated so what I decided to
+do was to create a video where I'm going
+to actually sign up create a new account
+I'm going to explain to you how to keep
+everything completely free I'm going to
+show you how to secure your account by
+ditching the root user and creating your
+own user I'm going to help you set up
+the CLI and show you how to run terminal
+commands and I'm even going to walk you
+through spinning up an ec2 instance
+creating a security key for it and all
+of that stuff so if you don't have an
+AWS account you've been a little
+hesitant for signing up now's your
+chance I'm going to walk you through it
+I'm going to keep it completely free and
+you're going to walk away from this
+video with the right tools to start
+learning cloud computing now later this
+week I'm going to release a couple
+videos where we're doing some fun python
+Automation in AWS to help you level up
+your python skills so if that interests
+you go ahead now and create that AWS
+account with me let's get started all
+right let's start out by going to
+aws.amazon.com free now for new users
+you get access to this free tier which
+you can explore more than 100 products
+and start building on AWS using the free
+tier and it tells you you get 12 months
+free this many hours of like Amazon ec2
+you get 750 hours if you use the t2
+micro or T3 micro and you can look at
+all this but basically you can start out
+on AWS for free for like a long time and
+I'm going to show you later how to not
+overspend and how to keep your costs
+like for me I think I spend like a
+dollar a month on AWS but anyway go to
+aws.amazon.com free and click on create
+a free account
+so first you're going to enter a root
+user email address this is going to be
+for your root user so I've used like two
+of my emails in AWS so far I'm going to
+add another one for this demonstration
+so I'm just going to say Travis Raj
+gmail.com go ahead and type in the email
+you want to associate with this account
+and I'm going to put Travis media also
+for the AWS account name again put
+something for you and click verify email
+address and you should be getting an
+email with the verification code for me
+that's 394-518
+and I'm going to hit verify and now set
+a password so I'm going to set something
+simple for now I'll change it later
+something that abides by these
+conditions here can't see it because of
+one password but anyway all four of
+these checked off that's good I'm gonna
+enter the password again
+and continue
+and here's my contact information so I'm
+going to use it as a personal thing my
+full name
+is this phone number
+and my address I'm going to put in all
+this information you put in your
+information and we'll continue to The
+Next Step The Next Step you have to
+enter in some billing information
+they're not going to charge you anything
+so it says here we will not charge you
+for usage below AWS free tier limits
+which you want to stay in the free tier
+at first we may temporarily hold up to
+one dollar as a pending transaction to
+verify your identity so make sure you
+have a dollar in there but here put in
+some kind of credit card it's not going
+to get charged other than maybe a dollar
+and so I'm going to do this and we'll go
+to the next page as well the next step
+is to confirm your identity I'm going to
+do it via a text message so I'm going to
+put in my mobile phone number
+and security check which I can never
+read this Let me refresh
+in three DB pH and send the SMS
+and then I need to verify my mobile
+number so I should be getting a text
+here
+and that's continue step four or five
+and select a support plan of course I
+want to choose free I don't need
+developer or business support so choose
+free there and complete your sign up
+that's it so thank you for signing up go
+to the AWS Management console let's go
+there because we're now in the root
+account which we want to get rid of we
+don't want to be using root accounts and
+then you get to the sign in screen so we
+don't know our account ID yet so just
+click sign in using root user email
+and punch in which you just signed up
+with so
+travisraj gmail.com
+and click next
+and the password
+all right so you're in the AWS console
+so the first thing you want to do is get
+rid of this root account so up here in
+the top just type in IAM for identity
+and access management click on that
+and you'll see here some security
+recommendations so the first one is ADD
+MFA for your root user so you do want
+this for Extra Protection for your root
+user so click on ADD MFA and click on
+assign MFA
+and I'm just going to say root MFA
+and I'm going to choose an authenticator
+app so click next
+and I'm going to use authy
+which is on my computer authy desktop
+you can use Google Authenticator or
+Microsoft authenticator whatever is best
+for you but I'm going to click plus to
+add a new one and enter code given by
+the website let's get a secret key
+copy that and paste it here
+and click add account let's put uh
+Travis Raj AWS root
+and I'm going to scroll down and find
+AWS Amazon web services click on that
+and click save
+and now I have a token so I can copy
+this and paste it in my MFA code one
+and then once this changes I'll paste in
+code two
+and if you do this on Google
+Authenticator you'll just need to click
+show QR code and scan it with your phone
+so let me copy the second one
+paste it here and add MFA and again this
+just adds a extra layer of protection on
+your account so that's great let's go
+back to the dashboard and you still see
+this as red just click on refresh and
+see if that satisfied that requirement
+yeah so root user has MFA and root user
+has no active access keys so we don't
+want to use this root account unless
+we're doing some billing stuff I think
+unless you maybe can delegate that to
+another user but otherwise you don't
+want to use the root account what we
+want to do is go to users and create a
+user that we're going to use like an
+administrative user not the root user
+but in an administrative user so click
+add users
+I'm going to put Travis media
+put whatever user you want provide user
+access to the AWS Management console you
+want to do that and I'm going to create
+an IAM user
+custom password I'm going to punch in
+something that I know
+and users must create a new password at
+next sign in if you are creating this
+account for someone then you would check
+this box and then when they sign in they
+can create their own password at that
+point but since this is for me I'm going
+to uncheck that and click next
+set permissions I can add a user to a
+group but it's just me so I'm actually
+going to go to attach policies directly
+and administrator access this is going
+to give me administrator access to
+everything and since you are the
+administrator this is okay if you're
+creating for someone else of course you
+want to get more granular click next
+and create user
+all right now do you see this console
+sign in url this is going to include
+that account ID that we didn't know
+earlier remember we chose the root user
+now we can use this sign-in URL that
+actually has that account ID in it so
+copy this and create a bookmark if
+you're using whatever browser you're
+using I'm going to go to bookmark
+manager and choose AWS and up here I'm
+going to do add new bookmark input
+us but Travis raw jws user and the URL
+and save it and that's going to be my
+URL to sign into this AWS account with
+that user so now I can return to users
+list and that's okay continue and I have
+one user that's an administrator now one
+of the biggest issues with AWS is that
+we create resources and then we forget
+that they're there I've done it
+everybody in AWS has done it you create
+five ec2 instances and you go off and
+you forget and then two weeks later you
+have like a 10 15 bill you don't want
+that to happen so what you want to do
+now with the root account is to create a
+billing alarm an alarm that goes off
+when you've reached a certain threshold
+if that happens so if it runs up to five
+bucks it's going to alarm you and say
+hey you're at five bucks and you're
+gonna know oops I left something running
+so if you just go to AWS billing alarm
+we're just going to follow the
+instructions so enabling billing alerts
+let's do that first so open the AWS
+billing console just click this link
+it's going to take you to the billing
+part of AWS after that in the navigation
+pane choose billing preferences and
+choose receive billing alerts so down
+here billing preferences
+so this just allows us to receive
+billing alerts so I'm just going to
+click here alert preferences go to edit
+and I want a cloud watch billing alerts
+and receive AWS free tier alerts why not
+let's click that too and that's going to
+be delivered to the root email address
+so let's update it
+and so we've enabled billing alerts now
+let's go and create one and to create
+one we got to go to cloudwatch so click
+on this link next click on create alarms
+here
+to create a new alarm
+let's click on create alarm choose
+select metric and then here you want to
+choose billing and I don't see billing
+so let me see all right so here it says
+before you create a billing alarm you
+must set your region to us East
+Northern Virginia billing metric is
+stored in this region so let's switch
+our region to us East one and we should
+see billing
+let's try this again select metric
+and there's billing so choose billing
+and then total estimated charge
+oh here's the node if you don't see
+billing then change your region to us
+East Northern Virginia all right select
+the box for estimated charges metric
+then choose select metric for statistic
+choose maximum let's go and
+then choose the selection here so USD
+estimated charges and select metric
+metric name is fine currency USD
+statistic maximum
+periods six hours threshold type static
+so whenever estimated charges is greater
+than five dollars that's why I'm going
+to set mine at so if you forget to cut
+something off and it gets up to five
+dollars or it estimates that it's going
+to be at five dollars it's going to send
+you an email saying warning you your
+alarm went off and you're going to get a
+five dollar bill then you'll know hey I
+need to go and check and make sure I
+closed everything down or shut
+everything down in additional
+configuration do the following for data
+points to alarm specify one out of one
+for missing data treatment treat missing
+data as missing
+so additional configuration one out of
+one treat data treat missing data is
+missing
+so go to next and under notification
+click add notification so Define the
+alarm state that will trigger this
+action when it's in alarm when we've
+reached that five dollars or it's
+estimated for the five dollars we want
+to create a new topic we don't have an
+SNS topic so let's create a new one SNS
+is just a simple notification service
+you create a topic and then that topic
+you can decide who to notify so we're
+just going to create one default Cloud
+watch alarms topic let's put it as
+billing alarm topic
+email endpoints that will receive the
+notification I'm just going to put my
+email that's associated with this
+and create topic
+so we don't have to worry about Auto
+scaling or ec2 action or systems manager
+just click next alarm name
+billing alarm and the alarm description
+is optional feel free to put in some
+kind of text but click next and just
+look everything over looks fine to me
+and create alarm so first things first
+set an alarm so you don't go above a
+certain threshold or a certain price and
+I have a warning here it says this
+action sends a message to an SNS topic
+with an endpoint that is pending
+confirmation and I have an email so
+check your email and confirm that you
+want to be
+subscribe to that topic so confirm
+subscription I'm going to click that and
+subscription confirmed so now I can
+refresh and I probably won't have a
+warning anymore
+great so we've set an alarm now let's
+get out of this root account and try to
+log into our user account so go up here
+and click on sign out after this I'll
+show you how to set up the CLI
+so log back in and you see how if you
+click IAM User it's going to ask for
+your account ID which we don't know but
+we saved it in our bookmarks so I'm
+going to click that link
+and it's going to add in that account ID
+for me and it says IEM username which is
+Travis media
+and password
+so again make sure you click that link
+that was given to you when you created
+the user that's going to populate your
+account ID and then your username
+password and sign in
+and this is going to be the user you
+want to use again don't use the root
+user so first things first go up to your
+name and go to security credentials
+and we're going to set up MFA because
+you should always be using some kind of
+multi-factor Never Should depend on your
+password and actually you should create
+a much more secure password that you
+don't even know and put it in something
+like one password that's what I'll do
+when I finish this video I just put in
+something temporarily for now
+and it warns us at the top you don't
+have MFA assigned so let's assign that
+device name I'm just going to put a
+Travis Raj MFA
+user
+and next
+and again I'm going to use authy so I'm
+going to click the Plus
+and grab the secret key
+paste it hit add account
+find AWS save it
+and then I'm going to enter my MFA codes
+oh I'm going to add an account name AWS
+trans
+I'm going to copy this paste it in MFA
+code one
+copy the second one
+paste it in code two and add MFA so next
+time when I sign in I'll put in my
+password then it'll ask me my MFA I'm
+going to go to authy and copy and paste
+now the next thing you want to do is set
+up your AWS CLI since we're developers
+we need to be using the CLI so if you
+just type in AWS CLI which is the
+command line interface click this
+and then go to somewhere there will be a
+getting started and then somewhere under
+here there's an install slash update
+page and I'm on Mac so I would just
+click this in
+run this installer so in your browser
+download the Mac OS package file and
+click this install it and it's good to
+go now to link that AWS CLI with your
+AWS account go back to the security
+credentials that you are at and go down
+to access keys so we're going to create
+an access key
+it's going to be to the command line
+interface
+and they're giving me some Alternatives
+here like better to use cloud shell and
+things like that which we can use too
+but let's let me show you how to set
+this up so click that box click next
+description tag I don't care to do that
+create access key and I have two things
+here I have an access key code and then
+a secret access key code so to configure
+the AWS CLI just open your terminal
+make it bigger and you should be able to
+do AWS to see that you installed it
+correctly
+but I'm going to say AWS configure this
+is how you configure it and it'll ask
+you your
+access key so copy this
+paste it
+it's going to ask you your secret access
+key so click the copy here
+paste it and default region name I'm
+going to do us East one works for me
+and default output format I do like Json
+and once that's done I should be able to
+because I'm an administrator do
+something like AWS S3 LS I don't have
+any S3 buckets but it should list them
+if I had them
+and if you go back to your CLI
+documentation here you can go to like
+using the AWS CLI
+um and click on something like Amazon
+ec2
+ec2 instances and it'll give you some
+examples like launching your instance or
+tagging your instance connecting to your
+instance listing your instances so AWS
+ec2 describe instances you could do that
+if you wanted to again we don't have any
+instances so you've set up your user I
+can click done here
+and it says you haven't viewed or
+downloaded your secret key the thing
+about secret Keys is you can always
+create a new one
+so you have an access key you can create
+a new one and then you can deactivate
+this one if you forget it it's not a big
+deal I don't write it down I wouldn't
+copy and paste it anywhere I would just
+AWS configure and use it and then for
+some reason it gets wiped out just
+deactivate it or delete it create a new
+one if you're by yourself if you're with
+a company they obviously have their own
+protocols but you've created your user
+you've set up MFA you've got your CLI
+running now what do you want to do go to
+Services go to ec2 Let's create an
+instance I'll show you how to do this
+free tier thing and by the way you
+should have gotten an email like right
+here it says for the next 12 months
+you'll have access you'll have free
+access to core AWS compute storage
+database and application services within
+the limits of free tier you can click on
+this free tier link and look into what
+that entails but as far as setting up an
+ec2 instance just go to instances and
+launch instance and I'm just going to
+say test server for my name
+and I'm going to choose Amazon Linux
+because it's in the free tier so right
+here T2 micro
+is free tier eligible always look for
+that free tier eligible writing I always
+use it it does everything I need to I
+mean don't try to run a kubernetes
+cluster on it but it does everything
+you'll need to so choose T2 Micro Key
+pair you need a key pair to be able to
+SSH into that so let's create a new one
+because we haven't yet so say Travis key
+pair
+test key pair
+and RSA is fine Pim is fine create key
+pair and I'm going to save it somewhere
+safe which for me is my desktop because
+I'm going to delete it after this
+and so I have a key bear I'll show you
+how to use that in a minute
+VPC this is like the default subnet no
+preference we don't want to get into all
+that you can check out my AWS networking
+video for information on those a
+firewall let's select an existing
+Security Group which we just have the
+default and let's actually create one
+we're going to create one and we're
+going to allow SSH traffic from anywhere
+so we can test our key out and the rest
+of this doesn't matter storage Advanced
+details just click launch instance don't
+be worried about price it's free tier
+eligible if it wasn't it's like a penny
+per hour I think I think it's a penny
+per hour so if you leave it running
+for like three hours is three cents
+that's why sometimes when I'm testing
+things I just spin up five for like an
+hour it's like five cent in the end of
+the month I have a bill for like a
+dollar two dollars maybe three dollars
+and it's no problem
+so view all instances now I see my
+instance here and it is pending so if I
+click on this I can go down to uh see
+what my key pair is I forgot the name
+Travis test key pair so I should be able
+to go here
+um and make sure I'm in my desktop and
+then what's neat is if you click on this
+and go to connect
+you can actually just click connect and
+connect to it from within Amazon so I
+can click this and it's going to give me
+a terminal to use but if you want to do
+it yourself just go to SSH client and
+copy this well the first thing you need
+to do is modify your privileges on your
+Pim key right you want to make it a 400
+it's a CH mod 400 you want to run this
+command
+and my desktop is where I saved it so
+run that to make the permissions really
+tight otherwise it won't work I don't
+think Amazon will even work with a Pim
+key that's not a 400 and then next you
+can just copy this example direct so
+click that
+paste it SSH Dash I which specifies my
+Pim key
+ec2 user which is like the default user
+for ec2 instances and the public DNS of
+the instance so click that
+yes that's fine and I should be able to
+ec2n
+sudo yum update
+and I can do what I want but again you
+can just go to ec2 instance connect and
+connect directly
+so click on Services look around you got
+the console home you got Lambda
+functions vpcs cloudtrail S3 buckets
+Cloud watch and let's go back to our CLI
+now we can do let's exit out of this
+now we can do that command that AWS ec2
+describe instances and it should
+describe that one instance we have so
+reservations and then we have instances
+we have an array of instances but we
+only have one so here's all the
+information about that instance and AWS
+CLI is pretty neat you can put in
+parameters there to just get the data
+you need
+so I don't think I have anything else to
+show you you are in AWS now you don't
+have any excuse play around you're free
+tier eligible just look for that free
+tier eligible wording when you go to
+spin up a resource and again consult
+this page for what you can do compute
+databases like if you go to databases
+you can create an RDS database dynamodb
+database you got storage the Amazon S3
+five gigs 12 months free
+containers
+750 hours
+web apps serverless so Lambda is like
+the cheapest thing in the world
+1 million free requests per month SNS
+sqs
+all of that it's like 1 million for free
+per month so have at it again I'm going
+to be doing some videos here in the next
+couple of days with python and AWS just
+for fun some challenges for you some
+ways to get your feet wet so if you like
+this video give it a good thumbs up
+consider subscribing and I'll see you in
+the next one
+[Music]
+foreign
+[Music]

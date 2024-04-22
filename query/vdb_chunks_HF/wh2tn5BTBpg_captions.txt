@@ -1,0 +1,328 @@
+hello everyone my name is Prashant
+Agarwal and I'm working a senior search
+specialist solution architect in AWS
+where I primarily focus on Amazon Open
+Source service today I'm going to talk a
+little bit about what Amazon open search
+services and how you can get started in
+this containment before getting started
+let's take a step back and see what is
+search all about so for example you go
+into an e-commerce website to buy a
+keyboard you enter the search term as
+keyboard and then you are presented with
+a list of keyboards with different
+brands and prices and then you have an
+option to filter through with respect to
+what brand and price range you are
+looking for so searching through whole
+Universal products in the store and then
+coming up with that one particular thing
+that actually makes your goal is what
+search all about so let's see what
+Amazon open source services so open
+source service is a fully managed
+service that makes it easy to deploy
+operate and scale open search cluster in
+AWS Cloud self-managed open search or
+elasticsearch takes time and specialize
+expertise by you can increase
+operational excellence by using a
+popular open source solution using open
+search then talking about the security
+you can audit and secure your data with
+a Data Center and network architecture
+using built-in certifications and then
+you can meet and maintain high security
+for authentication authorization and
+encryption and so on then obserability
+is what everyone talking about it now
+right so with Open Source service you
+can systematically detect potential
+threats and react to a systems State
+through an open source solution for
+object building last but not the least
+cost for log and application data
+increases as the data grows with Open
+Source service you can optimize time and
+resources for your strategic work by
+using different storage tier for your
+data so let's see what are different use
+cases for the open search service at a
+high level there are two use keys with
+Open Source service so one under log
+analytics you might need to do
+application monitoring where you want to
+look at the latency so you may want to
+look at the error code to see what is
+causing an issue to your application in
+case of security you may want to find
+out fraud or you want to make sure that
+you protect your application and
+services from denial of service attack
+while talking about such use case you
+might want to go to an e-commerce
+platform to find the product quickly as
+well as you might need the personalized
+recommendation provided by those search
+engine as per your interest now we know
+what is Open Source service and what are
+the use case so let's quickly jump on to
+see how the search engine works
+interaction model for search engine are
+really simple it's a rest API based
+technology you have generators of data
+whether it's your database that has your
+application data or it could be log data
+generated from server application iot
+devices Etc once you receive those data
+you need to convert them into the Json
+and then send to the open search then
+open search is going to index all of the
+fields this is one of the different
+theater like some of the database
+solution provide limited indexing
+capabilities for lookups but with open
+Search Everything is indexed Everything
+is searchable now you have data in your
+open search you can use the rest API for
+text search or you can use the
+aggregation queries for your log data
+where your business user can log in to
+open such dashboard and run interactive
+visualization and transport so let's see
+it in action so here we will log into
+the AWS console and see how does it
+works
+so if you go to your AWS console you can
+look you can search for the open search
+service over here
+then once you go to the open field
+service you can click on the domain and
+once you go to The Domain it will list
+on all the domains what you have within
+the service so in this in in this demo
+I'm going to kind of show you how you
+can create a domain and what all option
+you have so you have an option to
+specify the domain name so like say I am
+specifying 0 to 0 and my domain name
+then it will have an option to specify
+the end point so endpoint like if you
+want to give your open search dashboard
+as your company domain URL so for
+example like demo dot my company.com so
+that can be specified as part of the end
+point
+then there are three different
+deployment type like one is the
+production another one is development
+and testing and then you have the option
+for the custom so in case of production
+it will be kind of selecting the
+multi-ag architecture with the dedicated
+Master node whereas in case of
+development and testing or like in the
+custom one you have an option to specify
+different kind of setup with respect to
+the AG or kind of specifying the master
+nodes and the data nodes then it will
+pop up a list of all the versions
+supported within the open search service
+so like it is kind of showing a 1.3
+which is the latest within the open
+search and then 7.10 and 6.8 which is
+the latest in the 7.x and 6.x series but
+open search does support all the version
+starting from elasticsearch 1.5 up till
+7.10 and then all the version open
+search 1.021.3 if you and you can kind
+of toggle it by using this particular
+button then next you can enable or
+disable the auto tune which is kind of
+an advanced feature within the Open
+Source service which can do some sort of
+optimization out of the box next you can
+specify the number of edges you want to
+run your solution with like I'm
+selecting the 3ag architecture and then
+selecting the instance types like it
+supports R Series M series then I series
+as well as the C Series instances which
+you can choose from after specifying how
+many nodes you want you can specify how
+much disk you want to give at each data
+node so that can be specified under
+under this particular option for the EBS
+storage per node then open search has
+the different storage steering as I was
+talking about to kind of store like data
+at very low cost like you can enable the
+ultravomb node and then it supports two
+kind of ultra worm like Ultra one dot
+medium and the ultra worm one dot large
+so you can select the node depending
+upon how much data you are going to
+store into the ultravomb and then if you
+want to even store the data into the
+cold here so you can enable or disable
+the cold storage Azure then you have an
+option to specify the dedicated Master
+node like as I mentioned earlier like
+typically for the production workload we
+do recommend setting up the dedicated
+dedicated Master node as well
+then Open Source service will take the
+snapshot and that's kind of a backup
+which will be taken up every hour and it
+will be retained for 14 days under the
+network option you have an option to
+choose like whether you want to deploy
+your domain under the VPC or whether you
+want to make it public so say if I want
+to kind of deploy the domain under the
+public access then I can select that
+option and then I can enable the find
+and access control to kind of set up the
+granular control across my data then you
+have an option to either specify the
+imar and as the master user or you can
+create a master user so like here you
+can specify the username and password
+once you have specified those details
+then you have another option to kind of
+provide the single sign-on for your open
+search dashboard and here like you can
+have third party integration with the
+single sign-on or like you can bring
+your own identity provider such as like
+octoping Etc
+then you can Define the access policy
+whether you want it to be controlled
+only using the find and access control
+or if you want to set up any domain
+level or the if you want to set up any
+domain level access policy last you can
+set up the encryption so like if you
+have your own AWS KMS key you can bring
+it up over here if not then AWS will own
+and manage one a key for you and it will
+be set up by domain once you specify all
+the options you can click you can click
+on creating of this particular domain
+and once it will take roughly around
+five minutes to kind of create the
+domain and once domain is created you
+can go to your domain list and you can
+see whatever domain you have created so
+I have created a Zero to Hero domain
+earlier for this particular demo and
+then it specifies all the detail with
+respect to configuration like how many
+data nodes you are having how many
+masternodes you have and then on top you
+have the link to access the open search
+dashboard so now if you click on the
+open search dashboard it will be popping
+of the username and password screen to
+login but I have already logged in so
+it's not popped up and then what I'm
+going to do is I'm going to run a kind
+of sample indexing and searching and so
+how does the search works within the
+open search for that you can kind of
+click on the hamburger icon on the top
+left and then go to the dev tools
+so here I have a script to create an
+index so I'm creating an index with one
+sorts and to replica once my index is
+created I have a bulk API which is going
+to index some of the sample movie data
+from the IMDb and once I run that it
+will index all the data what I have in
+this bulk payload once my data is
+indexed you can run the search query as
+simple as like specifying the index name
+followed by the underscore search which
+will give you like how many documents
+are there in this particular index and
+then it will also give you top 20
+documents for that index which where you
+can see all the fields within that
+particular document so like it has the
+director name release date ratings then
+what are the title actors Etc because it
+is the movie database now if you want to
+kind of search for a specific term or
+keyword then you can run the term query
+so here I am going to search for the
+like what iron which is there in the
+title so once I run this query you can
+see my total count from 1499 has been
+reduced to 8 so that means there are
+eight matching documents which has iron
+in the Titan but it could be like the
+movie title is Iron Man over here but in
+the second one it's like generation iron
+or it could be something else dot dot
+iron but now if I know like I'm looking
+for the Iron Man I can even run the kind
+of complex query or the Boolean query
+where I specify multiple search
+condition for that one so like I want to
+match the title as iron as well as I
+know like Robert Downey is the actor on
+the Iron Man so I can specify those kind
+of filter criteria where I can search
+for the specific terms across different
+fields within the document now if I run
+this query you can see like out of those
+eight matching records for the iron now
+I have got only three documents because
+now it's returning me Iron Man Iron Man
+3 and Iron Man 2. so now it's getting me
+all the movies which has the diet iron
+and then actors as Robert Downey so this
+is how this search works within the open
+search so like I just like how you can
+index the data and then how you can run
+the search query apart from this search
+you can also use the dashboards where
+you can kind of generate the or create
+it as per depending upon your log data
+so I have a sample data coming from web
+traffic which are the details such as
+the unique visitors and like from what
+country your data is being generated and
+what kind of operating system you users
+are using so depending upon the fields
+what you have in your logs you can
+create those visualizations and then
+those individual visualization can be
+plotted into the single dashboard which
+can give you a high level overview
+across your application it could be as I
+mentioned earlier it could be your
+latency or it could be your error rates
+or kind of an overall Access Data within
+your applications
+so with that that's what I have with
+respect to the demo so what do we have
+next so you can get started with Amazon
+open fit service by signing up to AWS
+account you get a free trial for a year
+so check out the QR code for getting you
+started
+next if you are curious to know how the
+customers are using Amazon Open Source
+service
+you can check out our customary stories
+over here and then at last you can refer
+our dive into Amazon open field service
+Workshop which will help you to learn
+more about the open search by setting up
+a domain ingesting some of the sample
+data and then running the query against
+which data sets with that thanks a lot
+for listening and feel free to reach out
+to us if you have any questions

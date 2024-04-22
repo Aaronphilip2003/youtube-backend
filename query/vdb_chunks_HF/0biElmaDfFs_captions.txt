@@ -1,0 +1,120 @@
+i'm tim carroll i lead microsoft's
+efforts to support the global research
+community
+what is hpc
+hpc is high performance computing but if
+we go back a hundred years ago
+computers were actually people the early
+physicists realized that if they could
+put more computers or people onto a
+single problem they could get the
+answers faster
+fast forward to where we are today and
+if one computer can solve a problem
+5 000 computers can solve it even faster
+that is hpc
+i've been doing this for almost 20 years
+now and what has been the most
+satisfying about all of this about
+working in high performance computing is
+that it supports high performance
+research and so we have the great
+opportunity and benefit of seeing direct
+outcomes from the work that we do in
+supporting the researchers in their
+effort to make other people's lives
+better but when people hear high
+performance computing it sounds they
+immediately gravitate toward oh that
+means super computers high performance
+computing is really much more simple
+than that it's actually a capability not
+a thing and let me put it in terms that
+potentially humanize it so that if we
+think about what
+high performance computing is a good
+example of it is forecasting the weather
+right there are two elements of
+forecasting the weather there's getting
+the forecast right writing the piece of
+software that takes all of the inputs
+and comes out with a forecast that's
+accurate enough so that we can make
+plans based off of that forecast but
+there's another element of it we need to
+be able to run that model and get the
+results back in time frames that are
+meaningful meaning we want to get 100
+accurate forecast but if it takes five
+days that doesn't help us tomorrow so
+the optimal situation is to get 100
+percent accurate forecast but that we
+get it by tonight so that we can make
+plans for tomorrow
+so frequently when people hear high
+performance computing they immediately
+visualize huge rooms of blinking lights
+and smoked glass and cables everywhere
+in actuality the compute function that
+we provide in high performance computing
+is pretty simple right virtualization is
+where i take a single computer use a
+piece of software to make it look like
+five different computers so that
+multiple people can use it and make more
+efficient use of that system
+think of hpc as the inverse of that what
+we're actually doing is taking
+5 or 15 or 50 or 5000 computers
+using a piece of software that enables
+us to pull that compute resource
+together so that we could tackle
+problems that people could barely
+imagine 50 years ago a hundred years ago
+five years ago
+i often use weather
+and weather codes as an example of not
+only capability but how hpc is used
+because weather is one of the most
+taxing
+models and workflows that people can run
+there are a large number of inputs and
+it's very computationally intense and so
+it's a good indicator of what's possible
+on a system if you can run a weather
+code efficiently
+there is an open source weather model
+called wharf
+and that's used by a community of about
+40 000 people worldwide who not only use
+it but contribute back to the code
+recently we ran a benchmark where we
+were able to scale
+meaning we were able to run wharf over a
+hundred thousand cores simultaneously
+now there are very few centers worldwide
+with an on-premises supercomputer with
+the ability to allocate a hundred
+thousand cores to wharf
+but what's significant about what we did
+was not that we were able to run this
+very large workflow compared to how
+someone would do it on-prem what was
+very important is that what we did
+could be replicated if someone wanted to
+by any of the 40 000 users across the
+wharf community microsoft is delivering
+the infrastructure and tools to the
+global research community to uncap their
+creativity and their capability
+those who previously didn't have access
+to hpc resources now have it and those
+who are fortunate enough to have been
+using hpc to solve their problems can
+now expand their horizons even more
+broadly our team supports the global
+research community but more importantly
+we're part of it
+because we know that by enabling even
+one more scientist with one more great
+idea that ultimately it helps us all

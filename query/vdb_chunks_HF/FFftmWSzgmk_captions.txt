@@ -1,0 +1,547 @@
+maybe this is mandelbrot set back to
+basics
+um i need your help though can you think
+of a number um
+seven good can you square that number
+49.
+can you do this while filming you've
+done it correctly so far okay next
+question you're gonna get upset square
+49
+no okay good answer
+the thing is i don't really care about
+the answer what i'm caring about is an
+iteration i can keep asking you to do
+the same thing again and again and if i
+ask you to pick a number and keep
+squaring it you already know what's
+going to happen right
+it's gonna get big it's gonna blow up is
+it
+square one
+okay except one okay good now square
+half
+okay it's gonna get smaller yeah so
+sometimes it blows up and actually that
+happens when it's bigger than one and it
+becomes quite obvious when you try it
+but one doesn't blow up so one's
+different and numbers less than one like
+a half
+actually become a quarter when you
+square them and that becomes a sixteenth
+and so on but then numbers much less
+than one like minus six
+and that one's blown up as well so what
+i'm really talking about and what
+iteration is quite often talking about
+is when the iterations are stable
+when they sort of head towards somewhere
+you can see
+and when they're not and it's best to
+see this on a diagram so have a look at
+my screen here you pick the number seven
+which is kind of off my screen here but
+these red arrows would i'm moving them
+around
+this is not the greatest diagram let me
+get this clearance to start with it's
+just a line but the arrows are heading
+that way because when i square this
+number i'm moving around they go that
+way and they never come back much like
+your seven did but if i go less than
+this number one they don't go that way
+anymore they go that way
+in fact they head towards zero and
+they're stable there so for the sake of
+moving it around it's kind of nice to
+see the difference is a really sharp
+line and it completely changes behavior
+but that way they're unstable that way
+they're stable stable unstable stable
+unstable stable stable understandable
+you get the idea in fact if you go
+negative
+they're still stable they head positive
+because when you square a number that's
+negative they get positive still head
+towards zero until you hit minus one and
+then
+unstable stable stable unstable stable
+now despite all my commentary it's not
+that exciting
+yet
+and if you know anything about the
+theory of uh iterations and the
+consequences of them or if you've
+watched any other video about the
+mandelbrot set you know that
+we're not just talking about real
+numbers are the numbers on the line i've
+just been showing you we're talking
+about numbers in two dimensions so
+complex numbers and i'm not going to
+give you an introduction to complex
+numbers here because i don't think you
+need to hear it and there are other
+places you can get them
+holly on the number five channel has
+done excellent videos about how this
+happens but i want to show you the same
+comments that she's made on brown paper
+i'd like to show you
+moving here's my two-dimensional number
+line
+here is the number that you get to pick
+randomly we can still do it in one
+dimension just by sliding along here and
+the other dot that's moving around this
+tiny one
+is the square of the other dot
+so one squared is about one bigger than
+one it heads off that way lower than one
+goes that way but i can move off the
+line now and it has a weirdly circular
+flavor to it which i kind of like it's
+like chasing the number around it moves
+quicker than you expect and that's
+already quite pleasing if you're a nerd
+like me but what i really interested is
+the iteration if you keep doing the
+instruction square it square it square
+it we saw what happened on the real line
+in two dimensions it looks different so
+it looks like this
+so this line indicates if you start
+there it goes to there when you square
+it and then to there and there and so if
+i move this around the picture is kind
+of pleasing
+kind of wobbles around but it's always
+heading towards the center
+which i'll say is stable
+and there's a reason there's a circle on
+the screen because
+anytime i'm inside this circle it looks
+like it's stable even if it's kind of
+pretty as it moves
+but if i go near the edge of the circle
+it's less obviously stable it takes a
+lot longer to get to the center and then
+if i go outside the circle
+unstable
+stable unstable stable stable unstable
+stable this is a really nice
+demonstration of why complex numbers are
+helpful in that instead of your entire
+image of what's happening being on a
+line
+you've got a picture but it gets better
+right
+instead of just squaring it
+what would happen if you did square it
+add something square it add something
+square it add something now we could go
+back to the real line and see it
+happening on just one dimension but
+i feel like we should just go straight
+into two dimensions this is just the
+square square and square root square
+this letter c is indicating a number i
+could add every time so let me just
+slide it away from zero the moment it's
+not adding anything but if i add this
+number this red number which is a
+complex number as two-dimensional you
+can see something very different has
+happened
+if i start with this number and i keep
+squaring it and adding that number
+square it add that number square it add
+that number square add that number this
+is the path it goes and it makes a
+lovely star shape
+what's interesting though is not just
+the star shape although i kind of like
+it it's the stability so all around here
+is stable and it always gives you the
+same sort of stability like the starry
+stability even if it's expanding or
+shrinking
+but you kind of get the feeling that
+sometimes it's going to blow up and it's
+not obvious where because if i go near
+the circle you think it's going to blow
+up it's going to blow
+but it doesn't oh
+there was a moment there so outside the
+circle still stable but
+somewhere else outside the circle
+unstable
+and in fact it's not obvious where this
+is happening stable unstable stable
+stable unstable no stable still but over
+here inside the circle always stable
+unless i go there i keep saying the
+circle as if it's important it's really
+not important anymore the boundary is
+clearly not a circle but it's kind of
+nice to move this around i think that
+some places are unstable and some are
+stable what i'd really like to see
+and i hope you would too is the boundary
+of stability
+so let's see that in fact let's look at
+the boundary if the number i choose to
+add each time is zero you get the circle
+that's like the simple iteration but if
+you choose to add something different by
+the way i'm gonna i'm gonna write
+something down here what i'm capturing
+is this iteration which always looks a
+bit technical
+uh and if i cover that bit up is what we
+did at the beginning i said square a
+number and that's your new number square
+it square it square it but instead of
+just squaring you do square it add
+something they use c for it's a constant
+but it's a complex number
+now we're ready to look at that if c is
+zero you get a circle if it's not zero
+i see where my brain melts a little tiny
+bit if c is not zero the shapes become
+these shapes
+and i always find this a little bit of a
+shock
+there may be some familiar looking
+shapes i don't know but sometimes
+they're not even connected together
+they're like dusty little particles
+and these regions particularly when
+there's obviously a region which is not
+a circle necessarily they're called
+julius sets
+and again holly's done a really lovely
+video about julia setz
+there's a bit of history about julia
+sets um found by gaston julia hence the
+name who was a guy french mathematician
+i think early 20th century he did it
+without a computer like he wasn't able
+to just do this and move on jojoba and
+see the boundary he was doing this
+by hand and realizing there was some
+beautiful structure
+like i mean every time i tell the story
+i'm like fair play
+he also was really interesting in that
+he had no nose
+genuinely going to find a picture of
+gaston julia he has a leather thing
+across his face his nose was damaged in
+i think the first world war before i
+leave julia entirely the sets that you
+can see give you a little bit of a hint
+about what's coming so
+let me show you two things about the
+julia says first of all the simplest one
+is a circle it's not that exciting
+but they are exciting but they're not
+always obvious regions sometimes they
+look like they're separate regions these
+don't look like they're connected
+the way i'm animating it here they're
+all slightly dusty looking that's just
+the way i'm making it happen quickly but
+sometimes they're definitely not joined
+together and sometimes they look like
+things you might recognize the outline
+is looking vaguely like something i've
+hinted about this video may be looking
+like but there is something important
+that holly mentions in some of her
+videos about which ones are joined
+together connected mathematically and
+which ones are disconnected separate
+like dust let me show you what they end
+up describing so if we go back
+to this diagram when i did the iteration
+we were originally starting by you
+picking a number and squaring it what
+happened in 1979 is a guy called benoit
+that was his first name it didn't get
+better for him her name was mandelbrock
+it's a very famous figure in mathematics
+these days but it was 1979 1980 it's
+kind of recent in the grand scale of
+mathematics benoit was like
+i wonder what happens if i always start
+a zero instead of me saying pick a
+number i would say like pick a number as
+long as it's zero
+and then all i really care about is
+what's the constant i add each time and
+which ones of those
+give me stable and which ones don't
+now he didn't have a good computer he
+was doing it on an ibm working for ibm
+at the time and having to print out on a
+dot matrix or
+probably even pre dot matrix printer
+but we can kind of shortcut that so let
+me show you what it looks like always
+start at zero
+and move the constant around each time
+and if you do that all you'll see is
+sometimes it's stable like this and
+sometimes it's different stable i just
+really love this i'm just going to move
+it around
+they're kind of
+predictable and yet not predictable you
+get spirally things you get spider web
+things and sometimes it's not stable
+it's unstable sometimes it's
+got like how many arms is that seven
+arms sometimes it's got three arms
+sometimes it's got something else and
+sometimes it's just rubbish this is just
+the squaring adding squaring and adding
+these what they call these are the
+orbits
+of
+for every constant i pick which you
+mentioned i picked one arbitrarily it
+happened to be up in the top left there
+this one in fact
+that's its orbit
+but any other constant you pick anywhere
+on the screen has an orbit and some of
+them are boring they're just
+gone and some of them are not
+they're stable and some of them are not
+quite sure where the hell's going
+excuse my english there the uh
+the idea that maybe some points are
+special and some are not is what benoit
+mandelbrot first began to investigate
+other people were investigating it but
+it ended up with this idea getting his
+name on it so let me simulate what he
+first saw remember he didn't have a
+monitor on his computer he had a printer
+he's like type some code in if you want
+a picture you print it like 10 minutes
+later after you sold all the printer
+problems which
+still occur weird
+he then has got to go and look what he's
+like have i broken the printer or have i
+messed my code up or is what i'm seeing
+actually real and what he found was that
+what he saw
+the technicians got there first and they
+were like well he's got it wrong again
+and they cleaned up his images
+and took all the sort of dust that they
+assumed were printer artifacts they're
+like there's this smudgy bit here
+clearly not meant to be there we'll just
+like chop that off or tell the printer
+and he eventually had to go to the
+technician and say like my prints keep
+coming back different from what i
+expected they're like we're just
+cleaning them up he's like
+stop cleaning them i think what i'm
+trying to see is a weird messy dusty
+looking thing and they're like oh you
+want that
+i don't know exactly what happened
+there's a really good book by james
+gleick called chaos which kind of tells
+that story worth a read but i'm going to
+simulate the dust that he saw i'm sorry
+about the lack of brown paper but
+there's a reason for the colour
+this is the same orbit thing i was
+showing you just now
+can you see there's like a spirally
+three there but i'm even a black trail
+because i'm telling george bro to color
+the screen black if it's stable
+and if it's unstable like that one
+it goes blue
+black blue stable unstable and i'm just
+going to scribble on the screen now this
+is not going to make a good picture but
+i want you kind of to feel what
+mandelbrot felt like so he was seeing
+black and blue dots or in this case
+probably just white and black dots black
+for stable and in my case blue for
+unstable
+and he started to wonder why there's a
+black region here
+that's not over there it's not
+symmetrical i really think it must have
+felt something like this when you have a
+rubbish printer and you don't trust your
+code and you wonder what the hell are
+you seeing
+so this is going to take ages right i'm
+going to shortcut the process what he
+eventually saw
+in higher resolution than he saw is this
+picture
+and the black regions like i was
+coloring earlier are stable you can see
+anywhere i go in the black region
+you get a nice stable pattern with
+lovely orbits and that's the thing i
+love seeing move but if i go over the
+edge unstable
+stable
+unstable stable unstable so it's even
+stable in this region it goes into like
+two piles but if i go outside the region
+disappeared if i go up here you get into
+three piles and in fact holly's done a
+lovely video on how many piles you start
+making depending on which of these
+little bulbs you go into
+but the first time that mandelbrot saw
+this he had no idea about any of that
+structure he just saw a shape
+which
+shocked him first of all it's beautiful
+it's kind of weird but getting a viewer
+to display it like i've got on the
+screen now
+you can go and watch any number of
+youtube videos and zoom in on it but you
+can see what mandelbrock couldn't see
+that he saw this little blob and thought
+i wonder what that is and he had no idea
+until he wrote his code better that it
+was another version not quite the same
+and you can just zoom in forever and now
+i don't think youtube needs more videos
+of me zooming in on the mandelbrot set
+however i'm gonna do it anyway
+ben why are there different colors like
+it's not always black and blue
+absolutely so the original mandelbrot
+set that mandelbrot saw was two colors
+stable unstable
+black white or whatever i did black and
+blue the colors you're seeing in this
+are an arbitrary decision but they're
+not as arbitrary as you might think so
+let's go back to the original which is
+out here black for stable but the colors
+indicate that it's unstable
+but the color indicates how unstable and
+so if you think back to the very first
+question i asked you i said square it
+square it square it and within two
+iterations you're like no
+because it's big and that's an
+indication that you don't need to ask
+any more iterations to know what it's
+going to do
+with complex numbers it's less obvious
+what it's going to do it's much harder
+to predict but eventually we prove
+mathematicians i say we
+not me mathematicians prove that if you
+go outside a circle
+radius 2
+it's never coming back
+but if you're inside you can't guarantee
+it it might be bouncing around near the
+edge and it might stabilize again and
+you see some of the orbits are
+complicated so all you do with the
+computer is you ask it to check let's
+say 200 times
+and if you're still inside
+radius 2 circle of 200 you're like
+let's color it black it's probably
+stable
+but after like 50 iterations if you've
+just crossed outside well now i know
+it's gone but maybe the next time you
+check it takes 60 iterations
+and well that's less unstable maybe i
+could color that differently that was a
+long way of saying the different colors
+on the image are the different levels of
+instability really is how many times you
+checked before you knew they were going
+to explode
+and what matters when you zoom in is
+that the colors change really really
+quickly so all the colors on the screen
+here indicating that a tiny movement of
+the original point gives you massively
+different behavior and that's become
+what we call the sort of hallmark of
+chaos theory now is where a tiny change
+gives you fundamentally different
+behavior on the mandelbrot set you move
+your chain every point you make is
+dependent on which c you pick but julia
+said you fixed one and i can turn this
+software into julia set mode
+i'll do it slightly first if i press j
+on here there's the circle which is the
+original julia set
+and that's in the middle here but if i
+move the mouse around you see the julius
+sets with different values of c
+start changing beautifully like i mean
+it's just a quick sketchy animation but
+it's already much more nice than the
+outlines you saw earlier
+and what i love about this is the
+mandelbrot set is kind of like a map of
+julia sets so if you go and find
+a bit of the mandelbrot set down here
+this is called seahorse valley
+because it kind of looks like you've got
+loads of sea horses spiraling around
+but if i switch to a julius set around
+this point
+it looks the same
+but if i zoom out of the julia set
+you don't degenerate into mandelbrot you
+just get the seahorse julia set there it
+is that's as big as you get so
+if you zoom in on the mandelbrot set you
+get little sort of like regions which
+are like the julia set from that area
+it's like a map it's a geography of
+iterative stability
+when you say like that it sounds
+complicated but you just do something
+again and again and find out what
+happens in the long term
+and the fact that it makes something so
+beautiful i mean
+it's it's become so cliche for
+mathematicians to get excited about but
+i still get excited about it because
+it's lovely i didn't design it it's just
+there we can explore it and we can just
+sit and stare hypnotized at it for hours
+and you can program it in 10 seconds on
+a spreadsheet if you want to
+so as you said it's not in the
+mandelbrot set right
+and what that means so let's call this
+number say
+well i've already used c but let's call
+it c anyways

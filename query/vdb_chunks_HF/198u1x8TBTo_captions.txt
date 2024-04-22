@@ -1,0 +1,168 @@
+[Music]
+so in my previous video I looked at
+generally what kick mechanics is all
+about and today I want to specifically
+look at the concept of kinematics and in
+my previous video I did discuss that
+there are a number of variables that we
+have in the study of kinematics and I
+want to expand on those just a little
+before you get headlong into graphical
+analysis understanding of acceleration
+forces and so forth so the first thing
+is the concept that we have and I've
+mentioned it is how that we measure
+displacement now what is displacement
+now often it's confused and I'm going to
+use a different color here it's confused
+with the ID of distance but the two are
+not the same let me give you a diagram
+to help you understand the difference
+between the two so let's say you going
+from town a oh he to town B that is he
+very original names I know but it'll
+suffice for us now you check out your
+Google Maps and you discover that
+there's no direct route there and so
+you're going to take a number of paths
+streets roads and so forth to get to
+that point so you might go straight
+might go up this way you might go back
+forth like this and I get a lovely curve
+and eventually you get to B now that is
+the distance you travel try it yourself
+go to Google Maps and you'll find that
+if you go from one A to point B whatever
+your points are that you're not going to
+get a straight line between the two in
+order to get there summer will be a bit
+shorter let's say walking may be
+actually a shorter path and let's say
+driving but it won't be a straight line
+this is what we refer to as the distance
+however if I were to look at the
+straight-line path that is from point A
+to point B in a straight line like so
+that is our displacement so you can see
+that my displacement is actually the
+shortest path between the two points
+distance can be any path in fact you can
+go around and around and around and have
+a really long distance but your
+displacement is always going to be the
+same but the second aspect here is that
+this aspect of heat which is at the
+arrow displacement is more than just the
+length of the path between the two
+points it's also the direction which is
+also critical so what we say is
+displacement is a vector quantity now
+what does that mean that means it has
+it's a dimension a measurable quantity
+that has both a magnitude and a
+direction as soon as the magnitude
+changes it's a different dimension if
+its direction changes it's also a
+different dimension
+whereas distance is a scalar it's just
+the size there's no Direction related to
+it so generally in physics we are
+interested in displacement not distance
+now there are some exceptions to the
+rule but generally that's the one you
+look at and as I said before the symbol
+we use there is s and in distance often
+the symbol we use is D just to be
+different to differentiate between the
+two now we also have our measurement of
+time which are gonna I'm not going to
+write that is obviously a critical point
+because often were interested in okay an
+object's displacement has changed but
+what's the time frame that's taken place
+well if you remember from the previous
+video we didn't have this concept of
+velocity the velocity simply is the rate
+of change of displacement so if I were
+to put that in simple terms I would get
+the velocity that's the symbol is equal
+to the change in displacement so Delta s
+Delta me simply means change over time
+and that gives us the average velocity
+now notice I use here displacement
+that's critical why well there's another
+variable that's often referred to but is
+a little different and that's the
+concept of speed again many try to
+change those two that the velocity and
+speed are the same thing but they're not
+the first thing is that speed and I'm
+going to use SPSS symbol is
+not displacement over time its distance
+over time the change of distance over
+time and so you can see that the
+magnitude of my speed might actually be
+a different value your distance is
+larger than your displacement then your
+magnitudes of your speed is going to be
+different and secondly the fact that
+this distance is a scalar quantity speed
+is a scalar quantity whereas velocity is
+based on displacement which is a vector
+quantity therefore velocity is also a
+vector quantity we need a direction as
+well with velocity so imagine this if I
+were to let's say start from a and run
+all the way around B and come back to a
+my distance is quite large and my speed
+can be quite high in terms of its
+average speed but I could argue that
+well I'm back to the original point so
+my displacement is zero well my
+displacement is zero my average velocity
+ends up being zero so you can see the
+difference between the two and the final
+variable of course we need to talk about
+is acceleration and what is acceleration
+well acceleration is talking about how
+fast my velocity changes so we're really
+interested in the Delta V over time the
+change in velocity
+so like acceleration being based on
+velocity and velocity being a vector of
+elicitor and obviously displacement is a
+vector acceleration is a vector as well
+and so here as long as my velocity is
+changing I have an acceleration how come
+a velocity change well it can change in
+the magnitude but it can also change in
+the direction as well so as long as the
+velocity changes we know accelerations
+taking place now since it's a change of
+velocity so we have acceleration becomes
+a change of velocity and then often we
+use these two symbols V and U to
+separate my final velocity from my
+initial velocity over time and as a
+result we get an equation which we call
+an equation of motion that ties in
+velocity in time and acceleration so
+there is the basics of our kinematic
+analysis now if we really wanted to
+study this well and see the
+interrelationships between all of these
+variables the best thing we do is we do
+some data analysis
+and we graph the data that we get and
+the classic graphs that you get are
+usually displacement versus time graphs
+velocity versus time graphs and
+acceleration versus time graphs and
+using those graphs you can work out
+other equations of motion but you can
+also look at the relationships between
+those variables that's the next video
+have a look at that's my video on
+graphing motion I'm Paul from high
+school physics plained take care bye for
+now

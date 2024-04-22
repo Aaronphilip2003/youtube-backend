@@ -1,0 +1,550 @@
+yeah okay hi so I'm Christabel I'm a
+software engineer open government
+products and today oh wait so a GP yeah
+we are a unit inside graphtec Singapore
+and basically we built tech to solve
+public good problems so today I'm going
+to share a project that I've been
+working on and it's called vault and in
+particular I'm gonna talk about how I
+implemented authorization with an open
+source library Kok has been so before I
+go into the meet three having a bit of a
+so before I go into the meat of the
+canning code details I'll just give you
+a brief introduction on like why we
+decided to build vault and what as a key
+vote is so when you talk to public
+officers I think one of the things that
+you hear from them that is a big
+frustration for them is that sharing
+data within the government is hot so why
+is it hot it's because the current
+process as it stands is that they have
+to go and find some common contact or Co
+email someone to find out who has what
+data and whether it's appropriate for
+them and then they have to email for
+approval right so firstly that first
+step what's the problem that is
+discoverability because there is no
+standardized data dictionary that is
+digitized they don't know what exactly
+is available what is in the universe of
+government data and who exactly the
+approach to find it so if they do manage
+to find out who has the data and go and
+approach them then they have to write
+emails to get approval from their
+superiors which would then have to go on
+to the superiors of the other agency and
+as this like back and forth email chain
+so that's the request process it
+requires usually bilateral or
+multilateral agreements and different
+kinds of forms and processes about
+there's absolutely no standardization
+some of it is paper some of it is
+digital basically the requester does not
+know what information is actually they
+have to provide so if they do manage to
+get the approval they can now try and
+get the data so in the data transfer
+part there's a long lead time why
+because they have to get it over and
+encrypted thumb drive so someone has to
+put it in the thumb drive from some kind
+of database a lot of them are
+see databases and then physically pass
+the encrypted thumb drive to the
+requester so for someone I don't know
+driving cycling down whatever and I
+think that with modern-day kind of
+systems you're used to getting data
+programmatically right through ap is but
+obviously with this anchor2 thumb drive
+that's just not possible and finally the
+last one is accountability so because of
+all these different processes you need
+to trust that the person getting the
+data that their agency has processes in
+place to ensure that there's no data
+leak and that if there is data leak then
+they have the process to find out who
+exactly its accountable for this data
+leak so in order to solve these four
+main issues we decided that we should
+design a shared central repository and
+accompanying service that will help
+government officers discover and access
+the confidential data securely so for my
+description so far you can see that
+basically the system has two core specs
+your data sets and the ability to
+request for these data sets and that's
+what I focus on in this talk as well so
+just some visuals for you this is for as
+it currently stands so this is what a
+government officer will see when they
+log in the first picture is a is the
+homepage and you can see that there is a
+current view of the latest datasets that
+are uploaded by an agency there's also a
+list view and then there's a search
+functionality so you can type in
+whatever key what you want it such as
+the datasets on their title and
+description and we might also want to
+extend it to include like the different
+columns that are in the datasets so when
+you do find that it ISAT you want you
+click into it
+at the bottom you can see this picture
+over here it's a data dictionary so it's
+within the individual data set page and
+so this tackles the discoverability
+issue you can see that we've listed out
+or the columns the title the description
+so why exactly do these values represent
+and also the raw or derived category so
+that's useful especially for like
+example data and a list they need to
+know whether it's an aggregate data or
+is it the raw grain Aylor data and so
+this really helps people to be able to
+be like okay is this dataset relevant
+for me if not they just request it and
+then they don't know like whether it's
+actually gonna suit your needs so if
+someone is the user decides that they do
+want to request the data set they can
+go into the data request form and at the
+data set so because what we envision is
+that officers are going to request it on
+a per project or like per assignment
+basis so they're going to need to add
+multiple datasets so we support that
+functionality as well and then they just
+provide some like justification as text
+fields right so after the request has
+been submitted the approval will go off
+to the relevant parties so one of them
+would be the requesters own superior
+within the agency and also approval will
+be sent to each of the data set owning
+agencies so because we are allowing
+requesters to request for multiple data
+sets we need to send approval to each
+agency that owns any of these data sets
+because all of them have to approve the
+requests for it to go through basically
+yeah so this is what the approvals will
+see
+and finally if it has been approved the
+request then the user can get it on
+demand right so they can just go into
+the system downloaded it whenever they
+want and if let's say they delete or
+accidentally modify the data set once
+they're put it out of the system they
+can always log back in and get it they
+don't have to go through this whole
+process again right we also obviously do
+expire the request so that person cannot
+access it like indefinitely so from what
+I've described so far you can see that
+there is a need to have some kind of
+permission set to govern who can do what
+because even if I'm a legitimate
+government officer you'd want me running
+amok in this system and accessing the
+activity of like all your government
+officers and all the data sets so we do
+that through a combination of
+authentication and authorization so
+authentication is concerned with like
+whether I am a legitimate user so for
+example Who am I am Christabel I opened
+after SG when I login and so I can
+access it because I'm a legitimate
+government officer but even though I am
+allowed to go into the system I can only
+do a few things right so for example I
+can read the data set description which
+is that data set page where i can see
+the dictionary and the preview sample
+set preview i can also read my own
+request that i have made
+I can create my own request but because
+I'm not an admin user I cannot create my
+own dataset so I cannot write two data
+set I cannot approve other people's
+requests and I obviously also cannot
+reach other people's requests so
+authorization is really to do with
+restricting users like actions to their
+assigned scope right so how can we
+implement authorization one way is to
+the most like basic implementation is an
+access control list so one access
+control list is just a giant set of
+rules it's a list of permissions that
+you attach to other objects or resources
+inside your system so you would specify
+which user is going to access to which
+object and which action they can perform
+so we did vault we only have read and
+write but obviously you can further
+differentiate it to include like delete
+as well and so each entry will have a
+subject you will have a resource and you
+have the action associated so for
+example this little green man if he can
+write to this for approval he will have
+the permissions for those who are
+approvals and this little man below if
+he can read these four data sets who
+have the permissions for that right so
+what happens with an access control list
+is that it just gets exponentially large
+the more users and resources you have so
+I just have like eight users and eight
+resources here but it looks like a
+complete mess ready and it just grows
+and grows because you need to specify
+every single combination of user
+resource and action as possible in the
+system so what's an alternative to this
+so there's also another model called
+role based access control and it's
+basically where you just group your
+users into the term type of roles that
+you have in the system right and the
+good thing is that you can give your
+users different roles and they inherit
+the permissions from all those different
+roles so for example here I have a group
+a and a group B type type A and type B
+and for users in each group and I just
+place them inside that group and I
+associate that role role a and row B
+with these permissions and then all my
+users will inherit those specific
+permissions right so inheritance is what
+supports the row based model of access
+control and
+another nice thing is that you can
+compose more widely a couple zeros from
+your more granular rows so for example I
+want like some kind of super admin that
+can do what a and B do and I just put
+like C equals a and B and then it
+inherits all those permissions so what
+else can we do
+I found that RBAC alone wasn't enough
+for example if I have an admin user and
+I want them to be able to see the
+approvers from their organization if I
+just have an admin type user and then I
+try and give it access to the approvals
+they were worried they would be able to
+see that approvals from every single
+organization and that's not really how
+it works
+so this is quite similar to I guess how
+like AWS has your environment and you
+can only see yours right you cannot see
+those of other users so you have domain
+so here you have your organizational
+domains and if I want to add a
+particular resource I only want to let
+Alice and Bob see these resources then I
+just edit I just add the permissions
+within organization a and for the type
+of user a so the nice thing is that I
+can put my resources into different
+domains I can share them across
+organization a and B or just isolate
+them to within organization name ok and
+add a little like extension that I did
+was to group my resources the same way I
+grew up my users I grew up my resources
+into the different types and again
+that's simplified so you see from the
+whole giant mess of arrows I had earlier
+now I just have very clean three arrows
+per domain so just to do a quick
+comparison with an ACL with ten users
+ten resources I have more than hundred
+rules right hundred rules is assuming
+that each user can only have one
+permission for one resource anything
+more than that it just is even more than
+hundred and with rbac with your domains
+and resource groups the same
+configuration I only need around twenty
+four rules and so I explained why it's
+only 24 rules right so I follows that
+assign the domain groups and the road so
+if you can see lines one two four and
+five
+those are my policy definitions right so
+I have my row which is of type a inside
+the domain organization
+the first two are for domain
+organization a and it's to read and
+write the approvals the resource group
+of approvals within organization a and
+lines four and five is the same kind of
+ro a but it's for we and right within
+organization B so there's four rules for
+that ten rules for assigning the users
+to unroll oversee that's assuming that
+your user can have only one row but line
+seven to ten show four examples of how I
+do it so I say the Ellis belongs to
+domain organization a and she has Rho a
+and then Ellen has the Rho a inside the
+domain of organization B and finally I
+have ten rules to assign your resources
+to groups so similarly your approval one
+belongs to approvals of another
+organization a right so our BAC that's
+implemented with the open source lab
+week has been what's good about it is
+that it's accessible and flexible so I
+can assign multiple rows to my user and
+I can assign resources to multiple
+domains so for example Alice used to
+belong to only organization a if now I
+want to give her the type of row a
+inside organization be all I have to do
+is to add one line right so on line
+eight the highlighted one you see that a
+list now has the row a inside domain
+organization B and she inherits all the
+relevant permissions so I don't have to
+say like oh she needs to be able to
+access these 1000 like data says these
+two thousand requests or whatever it's
+very simple all right so this is I'm
+just gonna give like a little bit of
+detail on how exactly you can use has
+been so the thing that I showed before
+the code that I showed before was your
+set of rules so that's basically inside
+some kind of database and this is the
+configuration that will help has been
+decided based on those rules how can it
+check whether someone is allowed to
+perform an action right so the first
+three things that I have over here are
+my bindings so these are definitions the
+labor are is a request definition the
+label P is a policy definition and then
+the GS they are ro definitions okay so
+basically the definitions give me
+bindings for example if you send a
+request to my API endpoint it's like
+post to
+slash datasets slash the data set ID
+what the middleware will do is to
+transform that request into and are so
+the our label request definition so in
+that case if let's say I'm the one
+making the request right my subject the
+first few would be my email so
+Christabel at OpenGov the domain would
+be my organization so for GP the object
+would be the data set ID that i get from
+the endpoint and then the action would
+be based on the HTTP request method so a
+post is equal to a right so that's one
+that's the transformation that the
+middle where I wrote will hand though
+yep
+so similarly or policy definition and
+role definition are just bindings as
+well okay so going on to the policy
+affect the policy effect basically
+defines whether that request should be
+approved or not so you notice that
+there's this PDF T that's underlined
+over there basically you have T stands
+for effect and in this case it's allowed
+because if in your policy definition you
+don't specify and in fact the default is
+to allow so the other option is to deny
+but for that one you have to explicitly
+specify it I won't go into that in
+detail for now but allowing the deny
+basically means that you could do
+something that is conditional right so
+you can say that the policy effect will
+be if there's a policy that allows this
+request and no other policy that denies
+this request then allow the action to go
+through so it can get very complex to
+your policy effect but in this case I've
+kept it simple because that's all the
+system requires ok so the next biggest
+part would be the measure basically what
+has been in what has been is it's
+basically just like a pattern match it's
+like a pattern matching game so for
+example if a request comes in saying
+that admin at dinner after SG who
+belongs to the domain open government
+products wants to read approval with the
+ID one two three
+the I call the enforcer method of the
+has been API and it were based on the
+measure try and match against the
+policies in the database okay so I'll
+just show you briefly how this process
+goes and
+right so based on the first class that
+you see up there it says G are subject P
+dot subject our domain so we'll go
+inside the database and try and see
+whether there is such a policy so that
+are the requests subject you can see is
+at minute data that gasps and a request
+domain is domain underscore OGP so if
+you look inside the database you can see
+that on line three there's such a policy
+right and from that policy you can see
+that the second few policy that subject
+there's going to be role reader OGB
+sorry this is on line four right so
+going on to the second clause of the
+Metro it says that request that domain
+must be equal to policy domain so what's
+the request that don't mean that's gonna
+be the second few so domain underscore
+OTP that's my request domain inside the
+database there is a policy that's on
+line one
+the policy is a sense that my second
+view is also domain underscore GP so the
+request domain does match the policy
+domain right so going on to the top
+Clause it says that there should be a G
+to row definition with the requester
+object and the policy des objects so you
+see that the request the object is
+approval with the ID one two three and
+again in the database policy you see
+that the policy the object is a provost
+underscore OGP right so if you see on
+line six there is such a such a row
+definition right there is a definition
+that says that G two should be for a
+Provost underscore one two three and
+approvals underscore GP so you can see
+that it goes across all these rules and
+tries and match it based on the
+inheritance so it's not immediately
+obvious it's kind of like a chain
+pattern matching game but that's
+basically how has been tries to match
+the different rules to see whether an
+action can be performed okay so one last
+thing that was interesting for me is
+that for our system we couldn't just use
+organizations as domains and why is
+because when you make a request it
+actually belongs to the in the
+and not the organization right so if
+let's say I mean ogp and I create a
+request I don't want to just attach the
+permission to ogp meaning that like all
+my fellow or GPT members can see my
+request as well but I cannot just keep
+the request as a single resource item
+because I need to associate the
+approvals for that particular request
+and I also need to add the permissions
+for the relevant admit means to view
+this request so what I eventually came
+up with is that actually requests
+function as their own little domains as
+well so by making it a domain a pretty
+much functions the way as organization
+domains do I create a reader role for my
+request domain I associate it with a
+read permission I create a writer role I
+associate it with a write permission for
+the particular request and finally I
+also add a resource group which are the
+approvals for this request and I give it
+a read permission so being the creator
+of the request I then have the following
+raw definitions so Christopher OpenGov
+can be a reader for this domain and can
+also be a writer for this domain that
+means that I can read and write to my
+own request and also based on the line 3
+permission I can read all the approvals
+that are associated with my request
+because I need to find out the status of
+the approvals they are associated with
+my request so what happens when an
+approval needs to be created so
+previously in this example you can see
+that there is a row definition that says
+that approval 1 to 3 belongs to the
+organization or GP right and this policy
+ensures that your GPA means can go and
+read and modify the approval but for the
+requester who is maybe from a different
+organization they also need to be able
+to read these approvals and that's why
+there's this extra row definition here
+that puts one two three the approval one
+two three inside the domain of requests
+one two three and so that means that as
+the requester I can now base on this
+policy in line 3 over here I will be
+able to read
+all the approvals they associated with
+my request right so in order for the
+admin users to be able to read the
+request right so if I am an admin user
+and a request has come to me and I need
+to approve it I need to have the
+permission to see that request right but
+because it's in its own domain so I need
+to inherit the correct permissions so I
+say that all the admins of OGP can be
+readers of that particular request
+inside that request to me yeah so this
+was something that I didn't see was a
+pattern that was used before in other
+implementations of caspin so it's just
+something that I realized needed to be
+done because of the particularities of
+our system so I think that this embodies
+very well how OTP works we use a lot of
+open source code obviously verified that
+you know they are well maintained and
+and and used by other people so that box
+will be found in stuff like that but I
+don't think that it would have been
+really very possible for me to implement
+authorization the way I did if there
+wasn't really this kind of pattern
+matching library to help me do all of
+this so it would have been a lot more
+difficult and I mean a lot of open
+source stuff out there it's really good
+for example FERC has been they've
+created support for not just note but
+also go PHP Python net and yeah a lot of
+other companies like Cisco and stuff use
+it as well so I thought that this was a
+good example of how we use open source
+code in our development yeah thank you
+if you have any questions about this or
+what the ODP does feel free to us
+[Applause]
